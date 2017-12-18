@@ -2,6 +2,10 @@ dl_backoffice:
     resource: "@DLBackofficeBundle/Resources/config/routing.yml"
     prefix:   /
 
+user:
+    resource: "@DLBackofficeBundle/Controller/UserController.php"
+    prefix:   /
+    type:     rest
 
 # app/config/routing.yml
 fos_user:
