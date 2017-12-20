@@ -1,0 +1,3 @@
+dl_achat_homepage:
+    path:     /
+    defaults: { _controller: DLAchatBundle:Default:index }
