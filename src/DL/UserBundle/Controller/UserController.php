@@ -30,6 +30,36 @@ class UserController extends FOSRestController
         return $restresult;
     }
 
+    /**
+     * @Rest\Post("/user/")
+     * @param Request $request
+     * @return View
+     */
+    public function postAction(Request $request)
+    {
+        $data = new User;
+        $username = $request->get('username');
+        $email = $request->get('email');
+        $password = $request->get('password');
+        $passwordr = $request->get('passwordr');
+        $enabled = $request->get('enabled');
+        if(empty($email) || empty($password)|| empty($username)|| empty($passwordr)|| empty($enabled))
+        {
+            return new View("NULL VALUES ARE NOT ALLOWED", Response::HTTP_NOT_ACCEPTABLE);
+        }
+        $data->setEmail($email);
+        $data->setPassword($password);
+        $data->setUsername($username);
+        $data->setPassword($passwordr);
+        $data->setEnabled($enabled);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($data);
+        $em->flush();
+        $view = new View("User Added Successfully", Response::HTTP_OK);
+
+        return $view;
+ }
+
 
 
 

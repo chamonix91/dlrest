@@ -1,3 +1,7 @@
+dl_achat:
+    resource: "@DLAchatBundle/Resources/config/routing.yml"
+    prefix:   /
+
 dl_user:
     resource: "@DLUserBundle/Resources/config/routing.yml"
     prefix:   /

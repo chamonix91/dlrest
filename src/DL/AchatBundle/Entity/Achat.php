@@ -6,7 +6,7 @@
  * Time: 15:28
  */
 
-namespace DL\BackofficeBundle \Entity;
+namespace DL\AchatBundle \Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
