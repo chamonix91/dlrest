@@ -761,16 +761,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.5.13",
+            "version": "v2.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "93103f44a3e36e7b48165b6e6b736833f33b18ef"
+                "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/93103f44a3e36e7b48165b6e6b736833f33b18ef",
-                "reference": "93103f44a3e36e7b48165b6e6b736833f33b18ef",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/810a7baf81462a5ddf10e8baa8cb94b6eec02754",
+                "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754",
                 "shasum": ""
             },
             "require": {
@@ -833,7 +833,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-11-27T23:25:55+00:00"
+            "time": "2017-12-17T02:57:51+00:00"
         },
         {
             "name": "fig/link-util",
@@ -997,22 +997,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "faaf1d37cabe3da2f59d92d3125f4b5a729d6196"
+                "reference": "35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/faaf1d37cabe3da2f59d92d3125f4b5a729d6196",
-                "reference": "faaf1d37cabe3da2f59d92d3125f4b5a729d6196",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f",
+                "reference": "35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f",
                 "shasum": ""
             },
             "require": {
                 "paragonie/random_compat": "^1 || ^2",
                 "php": "^5.5.9 || ^7.0",
-                "symfony/form": "^2.8 || ^3.0",
-                "symfony/framework-bundle": "^2.8 || ^3.0",
-                "symfony/security-bundle": "^2.8 || ^3.0",
-                "symfony/templating": "^2.8 || ^3.0",
-                "symfony/twig-bundle": "^2.8 || ^3.0",
+                "symfony/form": "^2.8 || ^3.0 || ^4.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0 || ^4.0",
+                "symfony/security-bundle": "^2.8 || ^3.0 || ^4.0",
+                "symfony/templating": "^2.8 || ^3.0 || ^4.0",
+                "symfony/twig-bundle": "^2.8 || ^3.0 || ^4.0",
+                "symfony/validator": "^2.8 || ^3.0 || ^4.0",
                 "twig/twig": "^1.28 || ^2.0"
             },
             "conflict": {
@@ -1024,10 +1025,9 @@
                 "friendsofphp/php-cs-fixer": "^1.11",
                 "phpunit/phpunit": "^4.8.35|^5.4.3",
                 "swiftmailer/swiftmailer": "^4.3 || ^5.0 || ^6.0",
-                "symfony/console": "^2.8 || ^3.0",
-                "symfony/phpunit-bridge": "^2.8 || ^3.0",
-                "symfony/validator": "^2.8 || ^3.0",
-                "symfony/yaml": "^2.8 || ^3.0"
+                "symfony/console": "^2.8 || ^3.0 || ^4.0",
+                "symfony/phpunit-bridge": "^2.8 || ^3.0 || ^4.0",
+                "symfony/yaml": "^2.8 || ^3.0 || ^4.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -1065,7 +1065,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2017-12-12T14:22:46+00:00"
+            "time": "2017-12-18T17:30:39+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1988,16 +1988,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.28",
+            "version": "v3.0.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496"
+                "reference": "bb907234df776b68922eb4b25bfa061683597b6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/65eadf9e3fd5c47eee7986b306a5aed8affe6496",
-                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/bb907234df776b68922eb4b25bfa061683597b6a",
+                "reference": "bb907234df776b68922eb4b25bfa061683597b6a",
                 "shasum": ""
             },
             "require": {
@@ -2054,7 +2054,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-10-12T17:37:20+00:00"
+            "time": "2017-12-14T19:03:23+00:00"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2986,16 +2986,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "9ecf83a2628b4668f02e680f65357c62600749fc"
+                "reference": "074c2e205c849a5fb37b1c24ade03cc975ac8079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/9ecf83a2628b4668f02e680f65357c62600749fc",
-                "reference": "9ecf83a2628b4668f02e680f65357c62600749fc",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/074c2e205c849a5fb37b1c24ade03cc975ac8079",
+                "reference": "074c2e205c849a5fb37b1c24ade03cc975ac8079",
                 "shasum": ""
             },
             "require": {
@@ -3044,7 +3044,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-12-04T20:23:06+00:00"
+            "time": "2017-12-14T19:40:10+00:00"
         }
     ],
     "aliases": [],
