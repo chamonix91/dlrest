@@ -1,9 +1,13 @@
+dl_user:
+    resource: "@DLUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 dl_backoffice:
     resource: "@DLBackofficeBundle/Resources/config/routing.yml"
     prefix:   /
 
 user:
-    resource: "@DLBackofficeBundle/Controller/UserController.php"
+    resource: "@DLUserBundle/Controller/UserController.php"
     prefix:   /
     type:     rest
 
