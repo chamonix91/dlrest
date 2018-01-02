@@ -1,0 +1,24 @@
+diff a/.idea/workspace.xml b/.idea/workspace.xml	(rejected hunks)
+@@ -2,22 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="">
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/DefaultController.php" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/DLAchatBundle.php" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/DependencyInjection/Configuration.php" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/DependencyInjection/DLAchatExtension.php" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Resources/config/routing.yml" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Resources/config/services.yml" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Resources/views/Default/index.html.twig" />
+-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Tests/Controller/DefaultControllerTest.php" />
+-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Achat.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php" />
+-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Commande.php" />
+-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Produit.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
+-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" />
+     </list>
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="TRACKING_ENABLED" value="true" />
