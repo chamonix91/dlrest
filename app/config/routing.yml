@@ -39,7 +39,6 @@ app:
 
 auth-tokens:
     resource: "@DLUserBundle/Controller/AuthTokenController.php"
-    prefix:   /
     type:     rest
 
 
