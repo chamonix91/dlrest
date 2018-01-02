@@ -2,3 +2,25 @@ services:
 #    dl_user.example:
 #        class: DL\UserBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+
+    auth_token_user_provider:
+        class: DL\UserBundle\Security\AuthTokenUserProvider
+        arguments: ["@auth_token_repository", "@user_repository"]
+        public:    false
+
+    auth_token_repository:
+        class:   Doctrine\ORM\EntityManager
+        factory: ["@doctrine.orm.entity_manager", "getRepository"]
+        arguments: ["DLUserBundle:AuthToken"]
+
+    user_repository:
+        class:   Doctrine\ORM\EntityManager
+        factory: ["@doctrine.orm.entity_manager", "getRepository"]
+        arguments: ["DLUserBundle:User"]
+
+    auth_token_authenticator:
+        class:     DL\UserBundle\Security\AuthTokenAuthenticator
+        arguments: ["@security.http_utils"]
+        public:    false

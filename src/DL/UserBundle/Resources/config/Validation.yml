@@ -1,0 +1,29 @@
+DL\UserBundle\Entity\User:
+
+    properties:
+        email:
+            - NotBlank: ~
+            - Email: ~
+        plainPassword:
+            - NotBlank: { groups: [New, FullUpdate] }
+            - Type: string
+            - Length:
+                min: 4
+                max: 50
+        nom:
+            - NotBlank: ~
+            - Type: string
+        prenom:
+            - NotBlank: ~
+            - Type: string
+
+
+DL\UserBundle\Entity\Credentials:
+    properties:
+        login:
+           - NotBlank: ~
+           - Type: string
+
+        password:
+           - NotBlank: ~
+           - Type: string
