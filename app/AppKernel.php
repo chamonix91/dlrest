@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new DL\UserBundle\DLUserBundle(),
             new DL\AchatBundle\DLAchatBundle(),
+            new DL\CommissionBundle\DLCommissionBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
