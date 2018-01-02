@@ -10,10 +10,22 @@ dl_backoffice:
     resource: "@DLBackofficeBundle/Resources/config/routing.yml"
     prefix:   /
 
+#test_rest
 user:
     resource: "@DLUserBundle/Controller/UserController.php"
     prefix:   /
     type:     rest
+
+#inscription_rest
+inscription:
+    resource: "@DLUserBundle/Controller/InscriptionController.php"
+    prefix:   /
+    type:     rest
+
+#JWT_login
+api_login_check:
+    path: /api/login_check
+
 
 # app/config/routing.yml
 fos_user:
@@ -22,5 +34,12 @@ fos_user:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+#Authentification
+
+auth-tokens:
+    resource: "@DLUserBundle/Controller/AuthTokenController.php"
+    prefix:   /
+    type:     rest
 
 

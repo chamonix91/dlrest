@@ -16,8 +16,11 @@ class UserController extends FOSRestController
 {
 
 
+
+    // liste tous les utilisateurs ici
+
     /**
-     * @Rest\Get("/user")
+     * @Rest\Get("/user", name="_allusers")
      */
     public function getAction()
     {
@@ -26,15 +29,18 @@ class UserController extends FOSRestController
             return new View("there are no users exist", Response::HTTP_NOT_FOUND);
         }
 
-
         return $restresult;
+
     }
 
+    // Ajouter Utilisateurs Ici
+
     /**
-     * @Rest\Post("/user/")
+     * @Rest\Post("/user/", name="_user")
      * @param Request $request
      * @return View
      */
+
     public function postAction(Request $request)
     {
         $data = new User;
@@ -59,6 +65,7 @@ class UserController extends FOSRestController
 
         return $view;
  }
+
 
 
 
