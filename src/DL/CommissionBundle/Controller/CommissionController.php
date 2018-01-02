@@ -94,6 +94,7 @@ class CommissionController extends Controller
             $day = 30;
         }
         $date = new \DateTime($year. '-' . $month . '-' . $day .' 23:59:59');
+        $dated = new \DateTime($year. '-' . $month . '-' . '01 01:00:00');
         /***prerequit***/
         $mlms = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Mlm')
@@ -232,7 +233,7 @@ class CommissionController extends Controller
 
         $comarray = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Revenu')
-            ->getcommision($date);
+            ->getcommision($date, $dated);
         /*$comarray = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Revenu')
             ->findAll();*/

@@ -37,15 +37,16 @@ class CommissionRepository extends EntityRepository
         $count = $qb->getQuery()->getSingleScalarResult();
         return $count;
     }
-    public function getcommision($i)
+    public function getcommision($i, $j)
     {
 
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('revenu');
         $qb->from('DLBackofficeBundle:Revenu','revenu');
-        // $qb->from('DLGlobalBundle:DreamlifePartnerSale','sale');
-        $qb->where('revenu.date <= :name');
+        //$qb->where('revenu.date <= :name');
+        $qb->where('revenu.date BETWEEN :namei AND :name');
         $qb->setParameter('name', $i);
+        $qb->setParameter('namei', $j);
         $count = $qb->getQuery()->getResult();
         return $count;
     }
