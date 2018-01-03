@@ -234,10 +234,49 @@ class CommissionController extends Controller
         $comarray = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Revenu')
             ->getcommision($date, $dated);
-        /*$comarray = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('DLBackofficeBundle:Revenu')
-            ->findAll();*/
+        $lcp = array();
+        for($f=0;$f<count($comarray);$f++){
+            if($comarray[$f]['commission']>0){
+                if($comarray[$f]['commission']<
+                    $this->getmypack($this->getmlmbyid($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond()){
+            $lcp[] = [
+                'nom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getNom(),
+                'prenom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getPrenom(),
+                'cin' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getCin(),
+                'rib' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getRib(),
+                'chiffre' => $comarray[$f]['commission'],
+                //'pack' => $this->getmypack($this->getmlmbyid($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond(),
+            ];}
+            else{
+                $lcp[] = [
+                    'nom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getNom(),
+                    'prenom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getPrenom(),
+                    'cin' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getCin(),
+                    'rib' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getRib(),
+                    //'chiffre' => $comarray[$f]['commission'],
+                    'chiffre' => $this->getmypack($this->getmlmbyid($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond(),
+                ];
+            }
+        }
+        }
+        return $lcp;
+    }
+    function getinfobyid($i){
+        $comarray = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLUserBundle:User')
+            ->find($i);
         return $comarray;
-
+    }
+    function getmlmbyid($i){
+        $mlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire($i);
+        return $mlm;
+    }
+    function getmypack($i){
+        $mlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Pack')
+            ->find($i);
+        return $mlm;
     }
 }

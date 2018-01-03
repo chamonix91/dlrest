@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Controller/AuthTokenController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Controller/InscriptionController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Entity/AuthToken.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Entity/Credentials.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Form/Type/CredentialsType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Form/Type/UserType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Repository/UserRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Resources/config/Validation.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Resources/config/serialization.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Security/AuthTokenAuthenticator.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Security/AuthTokenUserProvider.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml.rej" afterPath="$PROJECT_DIR$/.idea/workspace.xml.rej" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Resources/config/services.yml" />
+      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php" />
+      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
+      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,18 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="68" column="2" lean-forward="false" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -61,6 +32,13 @@
       <find>getidp</find>
       <find>getco</find>
       <find>1</find>
+      <find>BackofficeBundle:Mlm</find>
+      <find>getno</find>
+      <find>getr</find>
+      <find>sana</find>
+      <find>getp</find>
+      <find>idpartenaire</find>
+      <find>pla</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -95,9 +73,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -109,7 +84,6 @@
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Due.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Namelist.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/AppBundle.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
@@ -131,10 +105,11 @@
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php" />
         <option value="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
       </list>
     </option>
   </component>
@@ -188,7 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +174,17 @@
             <path>
               <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
               <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -206,27 +192,12 @@
               <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,12 +262,28 @@
       <workItem from="1514539450576" duration="15241000" />
       <workItem from="1514795985455" duration="21563000" />
       <workItem from="1514882531725" duration="408000" />
-      <workItem from="1514883062614" duration="2748000" />
+      <workItem from="1514883062614" duration="14281000" />
+      <workItem from="1514972464201" duration="2593000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
+      <created>1514888588835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514888588835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
+      <created>1514890206775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514890206775</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113511000" />
+    <option name="totallyTimeSpent" value="127637000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,15 +296,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3480392" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
@@ -327,6 +312,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480392" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -358,6 +344,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,13 +460,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Namelist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
@@ -645,54 +628,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="108" column="20" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="155" column="29" lean-forward="false" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Revenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260746">
           <caret line="15338" column="52" lean-forward="false" selection-start-line="15338" selection-start-column="52" selection-end-line="15338" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3332">
-          <caret line="234" column="26" lean-forward="false" selection-start-line="234" selection-start-column="26" selection-end-line="234" selection-end-column="26" />
-          <folding>
-            <element signature="e#3580#4057#0#PHP" expanded="false" />
-            <element signature="e#4075#5107#0#PHP" expanded="false" />
-            <element signature="e#5144#6163#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,6 +661,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="68" column="2" lean-forward="false" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4862">
+          <caret line="288" column="20" lean-forward="false" selection-start-line="288" selection-start-column="20" selection-end-line="288" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="256" column="20" lean-forward="false" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
+          <folding>
+            <element signature="e#3546#10026#0#PHP" expanded="false" />
+            <element signature="e#3655#4132#0#PHP" expanded="false" />
+            <element signature="e#4150#5182#0#PHP" expanded="false" />
+            <element signature="e#5219#6238#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -730,10 +697,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="68" column="2" lean-forward="false" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="156" column="32" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Revenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="73" column="3" lean-forward="false" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="43" column="69" lean-forward="false" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="93" column="32" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="32" />
           <folding />
         </state>
       </provider>

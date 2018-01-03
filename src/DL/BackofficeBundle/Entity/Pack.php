@@ -40,6 +40,72 @@ class Pack
      */
     private $plafond;
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMontantmin()
+    {
+        return $this->montantmin;
+    }
+
+    /**
+     * @param mixed $montantmin
+     */
+    public function setMontantmin($montantmin)
+    {
+        $this->montantmin = $montantmin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMontantmax()
+    {
+        return $this->montantmax;
+    }
+
+    /**
+     * @param mixed $montantmax
+     */
+    public function setMontantmax($montantmax)
+    {
+        $this->montantmax = $montantmax;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlafond()
+    {
+        return $this->plafond;
+    }
+
+    /**
+     * @param mixed $plafond
+     */
+    public function setPlafond($plafond)
+    {
+        $this->plafond = $plafond;
+    }
+
+
+
 
 
 
