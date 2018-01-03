@@ -20,6 +20,12 @@ user:
     prefix:   /
     type:     rest
 
+#achat rest
+achat:
+    resource: "@DLAchatBundle/Controller/AchatController.php"
+    prefix:   /
+    type:     rest
+
 #inscription_rest
 inscription:
     resource: "@DLUserBundle/Controller/InscriptionController.php"

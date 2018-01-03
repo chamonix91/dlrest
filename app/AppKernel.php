@@ -24,7 +24,7 @@ class AppKernel extends Kernel
             new DL\UserBundle\DLUserBundle(),
             new DL\AchatBundle\DLAchatBundle(),
             new DL\CommissionBundle\DLCommissionBundle(),
-            new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

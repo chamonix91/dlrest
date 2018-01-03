@@ -85,7 +85,7 @@ class User extends BaseUser implements UserInterface
      */
     public function __construct()
     {
-        $this->datedenaissance = new \DateTime('now');;
+        $this->datedenaissance = new \DateTime('now');
     }
 
     /**
