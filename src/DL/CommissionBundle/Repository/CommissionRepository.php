@@ -41,12 +41,13 @@ class CommissionRepository extends EntityRepository
     {
 
         $qb = $this->getEntityManager()->createQueryBuilder();
-        $qb->select('revenu');
+        $qb->select('Sum(revenu.montant) as commission, revenu as rev');
         $qb->from('DLBackofficeBundle:Revenu','revenu');
         //$qb->where('revenu.date <= :name');
         $qb->where('revenu.date BETWEEN :namei AND :name');
         $qb->setParameter('name', $i);
         $qb->setParameter('namei', $j);
+        $qb->addGroupBy('revenu.idpartenaire');
         $count = $qb->getQuery()->getResult();
         return $count;
     }
