@@ -2,6 +2,8 @@
 
 namespace DL\UserBundle\Controller;
 
+use FOS\RestBundle\View\View;
+use JMS\Serializer\Serializer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
@@ -12,7 +14,7 @@ use FOS\RestBundle\Controller\Annotations as Rest; // alias pour toutes les anno
 use DL\UserBundle\Form\Type\CredentialsType;
 use DL\UserBundle\Entity\AuthToken;
 use DL\UserBundle\Entity\Credentials;
-use DL\DLUserBundle\Repository\UserRepository;
+
 
 class AuthTokenController extends Controller
 {
@@ -63,8 +65,12 @@ class AuthTokenController extends Controller
 
         $em->persist($authToken);
         $em->flush();
+        $a=$authToken->getUser();
 
-        return $authToken;
+        return $a;
+
+
+        //return array($authToken->getUser()->getId(),$authToken->getUser()->getEmail(),$authToken->getUser()->getPassword());
     }
 
     /**
@@ -72,7 +78,8 @@ class AuthTokenController extends Controller
      */
     private function invalidCredentials()
     {
-        return \FOS\RestBundle\View\View::create(['message' => 'Invalid credentials'], Response::HTTP_BAD_REQUEST);
+        $view = View::create(['message' => 'Invalid credentials'], Response::HTTP_BAD_REQUEST);
+        return $view;
     }
 
 
