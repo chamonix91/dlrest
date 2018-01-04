@@ -65,9 +65,13 @@ class AuthTokenController extends Controller
 
         $em->persist($authToken);
         $em->flush();
-        $a=$authToken->getUser();
+        $id=$authToken->getUser()->getId();
+        $role=$authToken->getUser()->getRoles();
+        $email=$authToken->getUser()->getEmail();
 
-        return $a;
+        return array('id'=>$id,
+            'role'=>$role,
+            'email'=>$email);
 
 
         //return array($authToken->getUser()->getId(),$authToken->getUser()->getEmail(),$authToken->getUser()->getPassword());
