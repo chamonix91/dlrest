@@ -24,6 +24,8 @@ class InscriptionController extends Controller
      */
     public function InscriptionAction(Request $request)
     {
+        var_dump($request);
+        die();
         $user = new User();
         $form = $this->createForm(UserType::class, $user, ['validation_groups'=>['Default', 'New']]);
 

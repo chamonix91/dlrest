@@ -43,23 +43,23 @@ class UserController extends FOSRestController
 
     public function postAction(Request $request)
     {
-        /*var_dump($request);
-        die();*/
+        //var_dump($request->get('username'));die();
+
         $data = new User;
         $username = $request->get('username');
         $email = $request->get('email');
         $password = $request->get('password');
-        $passwordr = $request->get('passwordr');
         $enabled = $request->get('enabled');
-        if(empty($email) || empty($password)|| empty($username)|| empty($passwordr)|| empty($enabled))
-        {
-            return new View("NULL VALUES ARE NOT ALLOWED", Response::HTTP_NOT_ACCEPTABLE);
-        }
+        $role = $request->get('role');
+
         $data->setEmail($email);
         $data->setPassword($password);
         $data->setUsername($username);
-        $data->setPassword($passwordr);
+        $data->setPassword($password);
         $data->setEnabled($enabled);
+        $data->setRoles(array($role));
+
+        //var_dump($data);die();
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
         $em->flush();
@@ -124,6 +124,22 @@ class UserController extends FOSRestController
             ->find($request->get('id'));
 
         return($user);
+    }
+
+    /**
+     * @Rest\Get("/user/{mail}/{password}")
+     * @param Request $request
+     * @Rest\View()
+     * @return mixed
+     */
+    public function loginAction(Request $request){
+        $mail=$request->get('mail');
+        $pass=$request->get('password');
+
+        $em = $this->get('doctrine.orm.entity_manager');
+        $user = $em->getRepository('DLUserBundle:User')
+            ->findOneBy(array('password'=> $pass, 'email' =>$mail));
+        return($user->getRoles());
     }
 
 

@@ -38,5 +38,21 @@ class UserRepository extends EntityRepository
         return $reservation;
 
     }
+    public function login($email , $password)
+    {
+        $em = $this->getEntityManager();
+        $qb = $em->createQueryBuilder();
+        $qb->select('r')
+            ->from('DLUserBundle:User', 'r')
+            ->where( 'r.email =:email')
+             ->andWhere('r.plainPassword =:password')
+            ->setParameter('email', $email)
+        ->setParameter('password', $password);
+        $query = $qb->getQuery();
+        $user = $query->getResult();
+        return $user;
+
+    }
+
 
 }
