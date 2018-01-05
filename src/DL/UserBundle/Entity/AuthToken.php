@@ -10,12 +10,7 @@ namespace DL\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity()
- * @ORM\Table(name="auth_tokens",
- *      uniqueConstraints={@ORM\UniqueConstraint(name="auth_tokens_value_unique", columns={"value"})}
- * )
- */
+
 class AuthToken
 {
     /**
