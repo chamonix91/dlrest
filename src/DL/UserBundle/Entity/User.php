@@ -88,6 +88,15 @@ class User extends BaseUser implements UserInterface
         $this->datedenaissance = new \DateTime('now');
     }
 
+    public function setEmail($email)
+    {
+        $email = is_null($email) ? '' : $email;
+        parent::setEmail($email);
+        $this->setUsername($email);
+
+        return $this;
+    }
+
     /**
      * @return mixed
      */

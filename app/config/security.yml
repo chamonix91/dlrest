@@ -1,47 +1,29 @@
 # app/config/security.yml
 security:
     encoders:
-        DL\Userbundle\Entity\User:
-            algorithm: bcrypt
-            cost: 12
+        FOS\UserBundle\Model\UserInterface: bcrypt
 
     role_hierarchy:
-        ROLE_USER:       [ROLE_USER,ROLE_NETWORKER]
-        ROLE_ADMIN:       [ROLE_FINANCE,ROLE_WEBMASTER]
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_ADMIN:       [ROLE_USER,ROLE_FINANCE,ROLE_WEBMASTER,ROLE_NETWORKER]
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
-        auth_token_user_provider:
-            id: auth_token_user_provider
-
-
 
     firewalls:
-       login:
-           pattern:  ^/api/login
-           stateless: true
-           anonymous: true
-           form_login:
-               check_path:               /api/login_check
-
-               require_previous_session: false
-
-       dev:
-           pattern: ^/(_(profiler|wdt)|css|images|js)/
-           security: false
-
-       main:
-           pattern: ^/api
-           stateless: true
-           simple_preauth:
-               authenticator: auth_token_authenticator
-           provider: auth_token_user_provider
-           anonymous: ~
-
-
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+            logout:       true
+            anonymous:    true
 
     access_control:
-                   - { path: ^/sign-in, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-                   - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+
