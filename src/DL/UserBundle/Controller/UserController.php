@@ -139,7 +139,12 @@ class UserController extends FOSRestController
         $em = $this->get('doctrine.orm.entity_manager');
         $user = $em->getRepository('DLUserBundle:User')
             ->findOneBy(array('password'=> $pass, 'email' =>$mail));
-        return($user->getRoles());
+        $loged=true;
+        if(empty($user)){
+            $loged=false;
+            return(array('role' => 'no','access'=>$loged));
+        }
+        return(array('role' => $user->getRoles(),'access'=>$loged));
     }
 
 
