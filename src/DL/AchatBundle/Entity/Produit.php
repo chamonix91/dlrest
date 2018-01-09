@@ -35,7 +35,7 @@ class Produit
     private $libelle;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $image1;
 
