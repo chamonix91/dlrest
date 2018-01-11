@@ -75,7 +75,7 @@ class User extends BaseUser implements UserInterface
     private $datedenaissance;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $image="";
 

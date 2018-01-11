@@ -16,19 +16,21 @@ class ProductController extends FOSRestController
     {
         return $this->render('', array('name' => $name));
     }
+
     /**
      * @Rest\Post("/product/", name="_product")
      * @param Request $request
      * @return View
      */
-    public function postAction(Request $request)
+    public function imgAction(Request $request)
     {
         $data = new Produit();
         $prix= $request->get('prix');
         $libelle= $request->get('libelle');
         $data->setPrix($prix);
         $data->setLibelle($libelle);
-        $data->setImage1('aaa');
+        //var_dump($data);die();
+        $data->setImage1($request->get('image1'));
         $data->setImage2('bbbb');
         $data->setImage3('cccc');
         $data->setQuantite(5);
@@ -41,5 +43,4 @@ class ProductController extends FOSRestController
 
         return $view;
     }
-    
 }

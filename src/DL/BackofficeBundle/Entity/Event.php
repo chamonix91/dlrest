@@ -41,7 +41,7 @@ class Event
     private $description;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $logo;
 
