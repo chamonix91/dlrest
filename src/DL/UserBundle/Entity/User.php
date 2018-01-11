@@ -1,9 +1,12 @@
 <?php
+
 namespace DL\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  *
  *
@@ -20,52 +23,71 @@ class User extends BaseUser implements UserInterface
      */
     protected $id;
 
-    protected $plainPassword;
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="DL\BackofficeBundle\Entity\Mlm", cascade={"persist"})
+     * @ORM\JoinColumn(name="mlm_id", referencedColumnName="id")
+     * @Assert\Type(type="DL\UserBundle\Entity\Mlm")
+     * @Assert\Valid()
+     *
+     */
+    private $Mlm ;
+
 
     /**
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $nom="";
+    private $nom = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $prenom="";
+    private $prenom = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $cin="";
+    private $cin = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $rib="";
+    private $rib = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $adresse="";
+    private $adresse = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $ville="";
+    private $ville = "";
 
     /**
      * @ORM\Column(type="string")
      */
-    private $pays="";
+    private $pays = "";
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $codepostal= 0;
+    private $codepostal = 0;
 
     /**
      * @ORM\Column(type="string")
      */
-    private $code="";
+    private $code = "";
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $tel=0;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $civilite=0;
 
     /**
      *
@@ -77,7 +99,7 @@ class User extends BaseUser implements UserInterface
     /**
      * @ORM\Column(type="string")
      */
-    private $image="";
+    private $image = "";
 
     /**
      * User constructor.
@@ -87,6 +109,24 @@ class User extends BaseUser implements UserInterface
     {
         $this->datedenaissance = new \DateTime('now');
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMlm()
+    {
+        return $this->Mlm;
+    }
+
+    /**
+     * @param mixed $Mlm
+     */
+    public function setMlm($Mlm)
+    {
+        $this->Mlm = $Mlm;
+    }
+
+
 
     public function setEmail($email)
     {
@@ -100,20 +140,34 @@ class User extends BaseUser implements UserInterface
     /**
      * @return mixed
      */
-    public function getPlainPassword()
+    public function getCivilite()
     {
-        return $this->plainPassword;
+        return $this->civilite;
     }
 
     /**
-     * @param mixed $plainPassword
+     * @param mixed $civilite
      */
-    public function setPlainPassword($plainPassword)
+    public function setCivilite($civilite)
     {
-        $this->plainPassword = $plainPassword;
+        $this->civilite = $civilite;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
 
+    /**
+     * @param mixed $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
 
 
     /**
@@ -307,9 +361,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->rib = $rib;
     }
-
-
-
 
 
 }
