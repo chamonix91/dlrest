@@ -35,17 +35,17 @@ class Produit
     private $libelle;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $image1;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $image2;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $image3;
 

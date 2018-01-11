@@ -59,3 +59,8 @@ tree:
     resource: "@DLCommissionBundle/Controller/ArboController.php"
     prefix:   /
     type:     rest
+
+product:
+    resource: "@DLAchatBundle/Controller/ProductController.php"
+    prefix:   /
+    type:     rest
