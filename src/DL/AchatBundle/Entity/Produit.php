@@ -59,6 +59,10 @@ class Produit
      * @ORM\Column(type="string")
      */
     private $categorie;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $description;
 
     /**
      * @ORM\Column(type="string")
@@ -207,6 +211,22 @@ class Produit
     public function setSouscategorie($souscategorie)
     {
         $this->souscategorie = $souscategorie;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 
 

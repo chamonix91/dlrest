@@ -31,8 +31,8 @@ class ProductController extends FOSRestController
         $data->setLibelle($libelle);
         //var_dump($data);die();
         $data->setImage1($request->get('image1'));
-        $data->setImage2('bbbb');
-        $data->setImage3('cccc');
+        $data->setImage2($request->get('image2'));
+        $data->setImage3($request->get('image3'));
         $data->setQuantite(5);
         $data->setCategorie('a');
         $data->setSouscategorie('78');
@@ -42,5 +42,18 @@ class ProductController extends FOSRestController
         $view = new View("User Added Successfully", Response::HTTP_OK);
 
         return $view;
+    }
+    /**
+     * @Rest\Get("/product")
+     */
+    public function getAction()
+    {
+        $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Produit')->findAll();
+        if ($restresult === null) {
+            return new View("there are no users exist", Response::HTTP_NOT_FOUND);
+        }
+
+        return $restresult;
+
     }
 }
