@@ -25,6 +25,12 @@ class Produit
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="DL\AchatBundle\Entity\Categorie")
+     * @ORM\JoinColumn(referencedColumnName="id")
+     */
+    private $idcategory;
+
+    /**
      * @ORM\Column(type="integer")
      */
     private $prix;
@@ -80,6 +86,24 @@ class Produit
     {
         $this->id = $id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIdcategory()
+    {
+        return $this->idcategory;
+    }
+
+    /**
+     * @param mixed $idcategory
+     */
+    public function setIdcategory($idcategory)
+    {
+        $this->idcategory = $idcategory;
+    }
+
+
 
     /**
      * @return mixed
