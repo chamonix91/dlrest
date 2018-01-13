@@ -26,7 +26,7 @@ class Produit
 
     /**
      * @ORM\ManyToOne(targetEntity="DL\AchatBundle\Entity\Categorie")
-     * @ORM\JoinColumn(referencedColumnName="id")
+     * @ORM\JoinColumn(name="idcategory", referencedColumnName="id", onDelete="CASCADE")
      */
     private $idcategory;
 
@@ -106,6 +106,8 @@ class Produit
     {
         $this->idcategory = $idcategory;
     }
+
+
 
 
 
