@@ -31,6 +31,11 @@ class Challenge
     private $datedebut;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $videolink;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $datefin;
@@ -145,6 +150,24 @@ class Challenge
     {
         $this->logo = $logo;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getVideolink()
+    {
+        return $this->videolink;
+    }
+
+    /**
+     * @param mixed $videolink
+     */
+    public function setVideolink($videolink)
+    {
+        $this->videolink = $videolink;
+    }
+
+
 
 
 

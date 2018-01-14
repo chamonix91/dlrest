@@ -29,6 +29,10 @@ class Pack
      * @ORM\Column(type="float")
      */
     private $montantmin;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $coef;
 
     /**
      * @ORM\Column(type="float")
@@ -103,6 +107,24 @@ class Pack
     {
         $this->plafond = $plafond;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCoef()
+    {
+        return $this->coef;
+    }
+
+    /**
+     * @param mixed $coef
+     */
+    public function setCoef($coef)
+    {
+        $this->coef = $coef;
+    }
+
+
 
 
 

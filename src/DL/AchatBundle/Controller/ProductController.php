@@ -25,11 +25,14 @@ class ProductController extends FOSRestController
     public function imgAction(Request $request)
     {
         $data = new Produit();
+        $ids= $request->get('idcategory');
+        $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Categorie')->find($ids);
+        //var_dump($restresult);die();
         $prix= $request->get('prix');
         $libelle= $request->get('libelle');
+        $data->setIdcategory($restresult->getId());
         $data->setPrix($prix);
         $data->setLibelle($libelle);
-        //var_dump($data);die();
         $data->setImage1($request->get('image1'));
         $data->setImage2($request->get('image2'));
         $data->setImage3($request->get('image3'));

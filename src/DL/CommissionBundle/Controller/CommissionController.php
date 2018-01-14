@@ -66,6 +66,7 @@ class CommissionController extends Controller
         $neud = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLAchatBundle:Commande')
             ->findOneByidpartenaire($i);
+        //var_dump($neud->getIdproduit());
         $produit = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLAchatBundle:Produit')
             ->find($neud->getIdproduit());
@@ -105,6 +106,7 @@ class CommissionController extends Controller
         $lchield = array();
         $rchield = array();
         for ($c = 0; $c < count($mlms); $c++) {
+
 
             if ($mlms[$c]->getaffectation() == 1) {
                 if (!empty($mlms[$c]->getcodegauche()) && !empty($mlms[$c]->getcodedroite())
