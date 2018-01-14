@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/ChallengeController.php" />
+    <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="add category 2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/dlrest.iml" afterPath="$PROJECT_DIR$/.idea/dlrest.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,71 +14,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="107" column="33" lean-forward="false" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
               <folding>
-                <element signature="e#45#80#0#PHP" expanded="true" />
-                <element signature="e#1455#1590#0#PHP" expanded="false" />
-                <element signature="e#1595#1857#0#PHP" expanded="false" />
-                <element signature="e#1863#1959#0#PHP" expanded="false" />
-                <element signature="e#1964#2700#0#PHP" expanded="false" />
-                <element signature="e#2705#2745#0#PHP" expanded="false" />
-                <element signature="e#2750#3043#0#PHP" expanded="false" />
-                <element signature="e#3390#3482#0#PHP" expanded="false" />
-                <element signature="e#3487#3986#0#PHP" expanded="false" />
+                <element signature="e#40#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/ChallengeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="22" />
-              <folding>
-                <element signature="e#50#107#0#PHP" expanded="true" />
-                <element signature="e#204#308#0#PHP" expanded="false" />
-                <element signature="e#313#355#0#PHP" expanded="false" />
-                <element signature="e#360#652#0#PHP" expanded="false" />
-                <element signature="e#657#755#0#PHP" expanded="false" />
-                <element signature="e#760#997#0#PHP" expanded="false" />
-                <element signature="e#1002#1114#0#PHP" expanded="false" />
-                <element signature="e#1119#1836#0#PHP" expanded="false" />
-                <element signature="e#1841#1943#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Challenge.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-692">
-              <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Categorie.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Categorie.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Categorie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1663">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Produit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
+              <folding>
+                <marker date="1515835302909" expanded="true" signature="3972:3979" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Achat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mlm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2023">
+              <caret line="124" column="35" lean-forward="false" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -91,6 +82,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>datea</find>
+      <find>dateaffectation</find>
+      <find>uso</find>
+      <find>affe</find>
+      <find>codedirect</find>
+      <find>getidp</find>
       <find>getco</find>
       <find>1</find>
       <find>BackofficeBundle:Mlm</find>
@@ -115,16 +112,15 @@
       <find>log</find>
       <find>getn</find>
       <find>getinfobyid</find>
-      <find>qua</find>
-      <find>desc</find>
-      <find>setQuantite</find>
-      <find>quentir</find>
-      <find>dele</find>
-      <find>,</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
+      <command text="s server:run " />
+      <command text="s cache:clear" />
+      <command text="s server:run " />
+      <command text="config:dump-reference fos_rest" />
+      <command text="dump-reference fos_rest" />
       <command text="s config:dump-reference fos_rest" />
       <command text="s debug:router " />
       <command text="c clear-cache" />
@@ -145,11 +141,6 @@
       <command text="s debug:router " />
       <command text="s doctrine:schema:update" />
       <command text="s doctrine:schema:update --force " />
-      <command text="s doctrine:schema:update --force" />
-      <command text="s cache:clear" />
-      <command text="s doctrine:schema:update --force" />
-      <command text="s cache:clear" />
-      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -164,15 +155,14 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Achat.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Blog.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Due.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Namelist.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/AppBundle.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/DLBackofficeBundle.php" />
         <option value="$PROJECT_DIR$/src/DL/UserBundle/DLUserBundle.php" />
@@ -196,13 +186,15 @@
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ArboController.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/ChallengeController.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Categorie.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -256,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,18 +282,10 @@
               <item name="AchatBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BackofficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -310,13 +295,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\dlrest\src\DL\BackofficeBundle\Entity" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\dlrest\src\DL\AchatBundle\Entity" />
       <recent name="C:\wamp64\www\dlrest\src\DL\UserBundle\Controller" />
       <recent name="C:\wamp64\www\dlrest\src\DL\UserBundle\Entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\dlrest\src\DL\BackofficeBundle\Entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -374,12 +359,14 @@
       <workItem from="1515317783550" duration="16796000" />
       <workItem from="1515411569638" duration="3902000" />
       <workItem from="1515489545140" duration="2510000" />
-      <workItem from="1515660634906" duration="9329000" />
-      <workItem from="1515691356235" duration="1059000" />
-      <workItem from="1515700257310" duration="3755000" />
-      <workItem from="1515747307057" duration="3620000" />
-      <workItem from="1515787765314" duration="6072000" />
-      <workItem from="1515833315434" duration="1813000" />
+      <workItem from="1515660634906" duration="965000" />
+      <workItem from="1515662803847" duration="2406000" />
+      <workItem from="1515768168821" duration="255000" />
+      <workItem from="1515770633329" duration="27000" />
+      <workItem from="1515791429960" duration="462000" />
+      <workItem from="1515825896790" duration="524000" />
+      <workItem from="1515834670761" duration="918000" />
+      <workItem from="1515923102683" duration="2097000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
       <created>1514888588835</created>
@@ -451,25 +438,46 @@
       <option name="project" value="LOCAL" />
       <updated>1515489921186</updated>
     </task>
-    <task id="LOCAL-00011" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
-      <created>1515661899920</created>
+    <task id="LOCAL-00011" summary="add category">
+      <created>1515791769571</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1515661899920</updated>
+      <updated>1515791769571</updated>
     </task>
-    <task id="LOCAL-00012" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
-      <created>1515677174938</created>
+    <task id="LOCAL-00012" summary="add category 2.0">
+      <created>1515791831889</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1515677174938</updated>
+      <updated>1515791831889</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add category 3.0">
+      <created>1515835443058</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1515835443058</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit test">
+      <created>1515929435322</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515929435322</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit to pull">
+      <created>1515930452056</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1515930452056</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219163000" />
+    <option name="totallyTimeSpent" value="201333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,19 +492,20 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25037822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23133236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31061807" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480392" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3120915" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34548336" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31061807" sideWeight="0.49121523" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -539,18 +548,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php" />
+    <MESSAGE value="add category" />
+    <MESSAGE value="add category 2.0" />
+    <MESSAGE value="add category 3.0" />
+    <MESSAGE value="commit test" />
+    <MESSAGE value="commit to pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit to pull" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="6" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -562,20 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -608,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -643,6 +650,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Revenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -664,11 +678,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/Credentials.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,6 +756,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="54" column="5" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -729,17 +770,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4539">
+          <caret line="275" column="24" lean-forward="false" selection-start-line="275" selection-start-column="20" selection-end-line="275" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="75" lean-forward="false" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2567">
-          <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -757,169 +805,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4539">
-          <caret line="275" column="24" lean-forward="false" selection-start-line="275" selection-start-column="20" selection-end-line="275" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="1037">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="113" column="5" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="127" selection-end-column="0" />
-          <folding>
-            <element signature="e#45#80#0#PHP" expanded="true" />
-            <element signature="e#1455#1590#0#PHP" expanded="false" />
-            <element signature="e#1595#1857#0#PHP" expanded="false" />
-            <element signature="e#1863#1959#0#PHP" expanded="false" />
-            <element signature="e#1964#2700#0#PHP" expanded="false" />
-            <element signature="e#2705#2745#0#PHP" expanded="false" />
-            <element signature="e#2750#3043#0#PHP" expanded="false" />
-            <element signature="e#3390#3482#0#PHP" expanded="false" />
-            <element signature="e#3487#3986#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1663">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="341">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/ChallengeController.php">
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/views/Default/test.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="107" column="33" lean-forward="false" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
           <folding>
-            <element signature="e#50#107#0#PHP" expanded="true" />
-            <element signature="e#204#308#0#PHP" expanded="false" />
-            <element signature="e#313#355#0#PHP" expanded="false" />
-            <element signature="e#360#652#0#PHP" expanded="false" />
-            <element signature="e#657#755#0#PHP" expanded="false" />
-            <element signature="e#760#997#0#PHP" expanded="false" />
-            <element signature="e#1002#1114#0#PHP" expanded="false" />
-            <element signature="e#1119#1836#0#PHP" expanded="false" />
-            <element signature="e#1841#1943#0#PHP" expanded="false" />
+            <element signature="e#40#82#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Challenge.php">
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-692">
-          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="17" />
+        <state relative-caret-position="2023">
+          <caret line="124" column="35" lean-forward="false" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <marker date="1515835302909" expanded="true" signature="3972:3979" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Categorie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/AchatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
