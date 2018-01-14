@@ -8,6 +8,7 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 class CommandeController extends FOSRestController
 {
@@ -30,10 +31,26 @@ class CommandeController extends FOSRestController
         $commandeinfo = array();
         for($c=0;$c<count($mlms);$c++){
             $partner = $this->getDoctrine()->getRepository('DLAchatBundle:Commande')
-                ->findOneBy($mlms[$c]->getIdpartenaire());
+                ->findOneByidpartenaire($mlms[$c]->getIdpartenaire());
+            $produit = $this->getDoctrine()->getRepository('DLAchatBundle:Produit')
+                ->find($partner->getIdproduit());
+            $user = $this->get('doctrine.orm.entity_manager')
+                ->getRepository('DLUserBundle:User')
+                ->find($partner->getIdpartenaire());
+            $intro = [
+                'id'=>$mlms[$c]->getIdpartenaire(),
+                'cin'=>$user->getCin(),
+                'email'=>$user->getEmail(),
+                'nom'=>$produit->getLibelle(),
+                'prix'=>$produit->getPrix(),
+                'datec'=>$partner->getDate()
+            ];
+            array_push($commandeinfo, $intro);
+
+
         }
 
-        return $restresult;
+        return $commandeinfo;
 
     }
     /**
@@ -47,5 +64,29 @@ class CommandeController extends FOSRestController
             ->find($request->get('id'));
 
         return($user);
+    }
+    /**
+     * @Rest\Put("/actcommande/{id}")
+     * @param Request $request
+     * @Rest\View()
+     */
+    public function ativeAction(Request $request){
+        //var_dump(new \DateTime('now'));die();
+        $data = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire($request->get('id'));
+
+
+
+        $data->setAffectation(1);
+        $data->setDateaffectation(new \DateTime('now'));
+
+
+        $em = $this->get('doctrine.orm.entity_manager');
+
+        $em->merge($data);
+        $em->flush();
+        return $data;
+
     }
 }

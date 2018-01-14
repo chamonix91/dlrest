@@ -36,6 +36,11 @@ commande:
     resource: "@DLCommissionBundle/Controller/CommandeController.php"
     prefix:   /
     type:     rest
+#achat rest
+vente:
+    resource: "@DLCommissionBundle/Controller/AchatController.php"
+    prefix:   /
+    type:     rest
 #challenge rest
 challenge:
     resource: "@DLBackofficeBundle/Controller/ChallengeController.php"

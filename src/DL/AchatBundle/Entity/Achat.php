@@ -41,9 +41,9 @@ class Achat
     private $dateconfirmation;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="integer")
      */
-    private $montant;
+    private $idproduit;
 
     /**
      * @ORM\Column(type="string")
@@ -128,18 +128,20 @@ class Achat
     /**
      * @return mixed
      */
-    public function getMontant()
+    public function getIdproduit()
     {
-        return $this->montant;
+        return $this->idproduit;
     }
 
     /**
-     * @param mixed $montant
+     * @param mixed $idproduit
      */
-    public function setMontant($montant)
+    public function setIdproduit($idproduit)
     {
-        $this->montant = $montant;
+        $this->idproduit = $idproduit;
     }
+
+
 
     /**
      * @return mixed
