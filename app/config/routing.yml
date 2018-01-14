@@ -26,7 +26,26 @@ achat:
     resource: "@DLAchatBundle/Controller/AchatController.php"
     prefix:   /
     type:     rest
-
+#blog rest
+blog:
+    resource: "@DLBackofficeBundle/Controller/blogController.php"
+    prefix:   /
+    type:     rest
+#commande rest
+commande:
+    resource: "@DLCommissionBundle/Controller/CommandeController.php"
+    prefix:   /
+    type:     rest
+#challenge rest
+challenge:
+    resource: "@DLBackofficeBundle/Controller/ChallengeController.php"
+    prefix:   /
+    type:     rest
+#categorie rest
+categorie:
+    resource: "@DLAchatBundle/Controller/CategorieController.php"
+    prefix:   /
+    type:     rest
 #inscription_rest
 inscription:
     resource: "@DLUserBundle/Controller/InscriptionController.php"
