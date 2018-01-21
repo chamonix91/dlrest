@@ -17,6 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User extends BaseUser implements UserInterface
 {
     /**
+     * @var integer
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -24,6 +25,7 @@ class User extends BaseUser implements UserInterface
     protected $id;
 
     /**
+     *
      *
      * @ORM\ManyToOne(targetEntity="DL\BackofficeBundle\Entity\Mlm", cascade={"persist"})
      * @ORM\JoinColumn(name="mlm_id", referencedColumnName="id")
@@ -35,71 +37,127 @@ class User extends BaseUser implements UserInterface
 
 
     /**
+     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $nom = "";
+    private $nom  ;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
-    private $prenom = "";
+    private $prenom ;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $cin = "";
+    private $cin ;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $rib = "";
+    private $rib ;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $adresse = "";
+    private $adresse ;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $ville = "";
+    private $ville;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $pays = "";
+    private $pays;
 
     /**
-     * @ORM\Column(type="integer")
+     *
+     * @var integer
+     * @ORM\Column(type="integer" ,nullable=true)
      */
-    private $codepostal = 0;
+    private $codepostal ;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $code = "";
+    private $code ;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     *
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $tel=0;
+    private $tel;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $civilite=0;
+    private $civilite ;
 
     /**
      *
      * @var \DateTime
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $datedenaissance;
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="blob" ,nullable=true)
      */
-    private $image = "";
+    private $image ;
+
+    /**
+     * @var blob
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $ribDocument ;
+
+    /**
+     *
+     *  @var blob
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $cinDocument ;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="facebook_id", type="string", nullable=true)
+     */
+    protected $facebook_id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="google_id", type="string", nullable=true)
+     */
+    protected $google_id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="twitter_id", type="string", nullable=true)
+     */
+    protected $twitter_id;
+
+
 
     /**
      * User constructor.
@@ -349,6 +407,40 @@ class User extends BaseUser implements UserInterface
     /**
      * @return mixed
      */
+    public function getCinDocument()
+    {
+        return $this->cinDocument;
+    }
+
+    /**
+     * @param mixed $cinDocument
+     */
+    public function setCinDocument($cinDocument)
+    {
+        $this->cinDocument = $cinDocument;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRibDocument()
+    {
+        return $this->ribDocument;
+    }
+
+    /**
+     * @param mixed $ribDocument
+     */
+    public function setRibDocument($ribDocument)
+    {
+        $this->ribDocument = $ribDocument;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
     public function getRib()
     {
         return $this->rib;
@@ -360,6 +452,54 @@ class User extends BaseUser implements UserInterface
     public function setRib($rib)
     {
         $this->rib = $rib;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookId()
+    {
+        return $this->facebook_id;
+    }
+
+    /**
+     * @param string $facebook_id
+     */
+    public function setFacebookId($facebook_id)
+    {
+        $this->facebook_id = $facebook_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGoogleId()
+    {
+        return $this->google_id;
+    }
+
+    /**
+     * @param string $google_id
+     */
+    public function setGoogleId($google_id)
+    {
+        $this->google_id = $google_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTwitterId()
+    {
+        return $this->twitter_id;
+    }
+
+    /**
+     * @param string $twitter_id
+     */
+    public function setTwitterId($twitter_id)
+    {
+        $this->twitter_id = $twitter_id;
     }
 
 

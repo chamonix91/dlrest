@@ -26,17 +26,21 @@ class Commande
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $idproduit;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $idpartenaire;
 
     /**
-     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $date;
 

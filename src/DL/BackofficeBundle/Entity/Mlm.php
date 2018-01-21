@@ -26,64 +26,79 @@ class Mlm
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer" ,nullable=true)
      */
     private $idpartenaire;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $codeparent;
 
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $codedirect;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer" ,nullable=true)
      */
     private $paqueid;
 
     /**
-     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $datecreation;
 
     /**
-     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $dateaffectation;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @var boolean
+     * @ORM\Column(type="boolean" ,nullable=true)
      */
     private $affectation;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $codegauche;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $codedroite;
 
 
     /**
-     * @ORM\Column(type="boolean")
+     * @var boolean
+     * @ORM\Column(type="boolean" ,nullable=true)
      */
     private $active;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer" ,nullable=true)
      */
     private $nbrepartenairegauche;
 
     /**
-     * @ORM\Column(type="integer")
+     *
+     * @var integer
+     * @ORM\Column(type="integer" ,nullable=true)
      */
     private $nbrepartenairedroite;
 
