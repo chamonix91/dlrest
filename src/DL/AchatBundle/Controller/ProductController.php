@@ -18,19 +18,20 @@ class ProductController extends FOSRestController
     }
 
     /**
-     * @Rest\Post("/product/", name="_product")
+     * @Rest\Post("/product/", name="add_product")
      * @param Request $request
      * @return View
      */
-    public function imgAction(Request $request)
+    public function imgaAction(Request $request)
     {
+        //var_dump("aa");die();
         $data = new Produit();
         $ids= $request->get('idcategory');
         $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Categorie')->find($ids);
         //var_dump($restresult);die();
         $prix= $request->get('prix');
         $libelle= $request->get('libelle');
-        $data->setIdcategory($restresult->getId());
+        $data->setIdcategory($restresult);
         $data->setPrix($prix);
         $data->setLibelle($libelle);
         $data->setImage1($request->get('image1'));

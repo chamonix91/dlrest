@@ -26,6 +26,11 @@ achat:
     resource: "@DLAchatBundle/Controller/AchatController.php"
     prefix:   /
     type:     rest
+#produit rest
+produit:
+    resource: "@DLAchatBundle/Controller/ProductController.php"
+    prefix:   /
+    type:     rest
 #blog rest
 blog:
     resource: "@DLBackofficeBundle/Controller/blogController.php"
@@ -81,10 +86,5 @@ auth-tokens:
 #arbo_rest
 tree:
     resource: "@DLCommissionBundle/Controller/ArboController.php"
-    prefix:   /
-    type:     rest
-
-product:
-    resource: "@DLAchatBundle/Controller/ProductController.php"
     prefix:   /
     type:     rest

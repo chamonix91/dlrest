@@ -80,7 +80,7 @@ class User extends BaseUser implements UserInterface
     private $code = "";
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $tel=0;
 
