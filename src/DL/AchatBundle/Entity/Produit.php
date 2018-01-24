@@ -31,47 +31,60 @@ class Produit
     private $idcategory;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     *
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $prix;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $libelle;
 
     /**
-     * @ORM\Column(type="blob")
+     * @var blob
+     * @ORM\Column(type="blob", nullable=true)
      */
     private $image1;
 
     /**
-     * @ORM\Column(type="blob")
+     * @var blob
+     * @ORM\Column(type="blob", nullable=true)
      */
     private $image2;
 
     /**
-     * @ORM\Column(type="blob")
+     * @var blob
+     * @ORM\Column(type="blob", nullable=true)
      */
     private $image3;
 
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $quantite;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $categorie;
+
+
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $description;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $souscategorie;
 
