@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -354,7 +349,7 @@
       <workItem from="1516805625686" duration="3428000" />
       <workItem from="1516891183706" duration="229000" />
       <workItem from="1517053551409" duration="641000" />
-      <workItem from="1517066485271" duration="6647000" />
+      <workItem from="1517066485271" duration="6732000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
       <created>1514888588835</created>
@@ -475,11 +470,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516807890324</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="after change">
+      <created>1517074125065</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1517074125065</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302482000" />
+    <option name="totallyTimeSpent" value="302567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
