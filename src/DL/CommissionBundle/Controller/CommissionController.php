@@ -203,6 +203,7 @@ class CommissionController extends Controller
                     }
 
                 }
+                //var_dump($mydirect);die();
                 $lchield = array();
                 $rchield = array();
                 $mydirect = array();
@@ -211,6 +212,7 @@ class CommissionController extends Controller
                 $commissionindirect = $commissionindirect - $ac;
                 $commissiondirect = $totacommissiondirect *0.1;
                 $commissiondirect = $commissiondirect -$acd;
+
 
               $revenue = new Revenu();
               $revenue->setIddue(1);

@@ -24,11 +24,7 @@ class Produit
      */
     private $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="DL\AchatBundle\Entity\Categorie")
-     * @ORM\JoinColumn(name="idcategory", referencedColumnName="id", onDelete="CASCADE")
-     */
-    private $idcategory;
+
 
     /**
      * @var integer
@@ -68,12 +64,6 @@ class Produit
      */
     private $quantite;
 
-    /**
-     *
-     * @var string
-     * @ORM\Column(type="string", nullable=true)
-     */
-    private $categorie;
 
 
     /**
@@ -81,12 +71,6 @@ class Produit
      * @ORM\Column(type="string", nullable=true)
      */
     private $description;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", nullable=true)
-     */
-    private $souscategorie;
 
     /**
      * @return mixed
@@ -105,29 +89,7 @@ class Produit
     }
 
     /**
-     * @return mixed
-     */
-    public function getIdcategory()
-    {
-        return $this->idcategory;
-    }
-
-    /**
-     * @param mixed $idcategory
-     */
-    public function setIdcategory($idcategory)
-    {
-        $this->idcategory = $idcategory;
-    }
-
-
-
-
-
-
-
-    /**
-     * @return mixed
+     * @return int
      */
     public function getPrix()
     {
@@ -135,7 +97,7 @@ class Produit
     }
 
     /**
-     * @param mixed $prix
+     * @param int $prix
      */
     public function setPrix($prix)
     {
@@ -143,7 +105,7 @@ class Produit
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getLibelle()
     {
@@ -151,7 +113,7 @@ class Produit
     }
 
     /**
-     * @param mixed $libelle
+     * @param string $libelle
      */
     public function setLibelle($libelle)
     {
@@ -159,7 +121,7 @@ class Produit
     }
 
     /**
-     * @return mixed
+     * @return blob
      */
     public function getImage1()
     {
@@ -167,7 +129,7 @@ class Produit
     }
 
     /**
-     * @param mixed $image1
+     * @param blob $image1
      */
     public function setImage1($image1)
     {
@@ -175,7 +137,7 @@ class Produit
     }
 
     /**
-     * @return mixed
+     * @return blob
      */
     public function getImage2()
     {
@@ -183,7 +145,7 @@ class Produit
     }
 
     /**
-     * @param mixed $image2
+     * @param blob $image2
      */
     public function setImage2($image2)
     {
@@ -191,7 +153,7 @@ class Produit
     }
 
     /**
-     * @return mixed
+     * @return blob
      */
     public function getImage3()
     {
@@ -199,7 +161,7 @@ class Produit
     }
 
     /**
-     * @param mixed $image3
+     * @param blob $image3
      */
     public function setImage3($image3)
     {
@@ -207,7 +169,7 @@ class Produit
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getQuantite()
     {
@@ -215,7 +177,7 @@ class Produit
     }
 
     /**
-     * @param mixed $quantite
+     * @param int $quantite
      */
     public function setQuantite($quantite)
     {
@@ -223,39 +185,7 @@ class Produit
     }
 
     /**
-     * @return mixed
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
-    }
-
-    /**
-     * @param mixed $categorie
-     */
-    public function setCategorie($categorie)
-    {
-        $this->categorie = $categorie;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSouscategorie()
-    {
-        return $this->souscategorie;
-    }
-
-    /**
-     * @param mixed $souscategorie
-     */
-    public function setSouscategorie($souscategorie)
-    {
-        $this->souscategorie = $souscategorie;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -263,7 +193,7 @@ class Produit
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      */
     public function setDescription($description)
     {

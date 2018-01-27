@@ -27,11 +27,11 @@ class ProductController extends FOSRestController
         //var_dump("aa");die();
         $data = new Produit();
         $ids= $request->get('idcategory');
-        $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Categorie')->find($ids);
+      //  $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Categorie')->find($ids);
         //var_dump($restresult);die();
         $prix= $request->get('prix');
         $libelle= $request->get('libelle');
-        $data->setIdcategory($restresult);
+       // $data->setIdcategory($restresult);
         $data->setPrix($prix);
         $data->setLibelle($libelle);
         $data->setImage1($request->get('image1'));
@@ -39,8 +39,8 @@ class ProductController extends FOSRestController
         $data->setImage3($request->get('image3'));
         $data->setQuantite($request->get('quantite'));
         $data->setDescription($request->get('description'));
-        $data->setCategorie('a');
-        $data->setSouscategorie('78');
+       /* $data->setCategorie('a');
+        $data->setSouscategorie('78');*/
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
         $em->flush();

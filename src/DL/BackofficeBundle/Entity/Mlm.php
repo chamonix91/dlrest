@@ -17,91 +17,68 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Mlm
 {
-
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
-     * @var integer
      * @ORM\Column(type="integer" ,nullable=true)
      */
-    private $idpartenaire;
-
+    private $idpartenaire ;
     /**
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $codeparent;
-
-
+    private $codeparent ;
     /**
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $codedirect;
-
+    private $codedirect ;
     /**
-     * @var integer
      * @ORM\Column(type="integer" ,nullable=true)
      */
-    private $paqueid;
-
+    private $paqueid=0;
     /**
-     *
-     * @var \DateTime
      * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $datecreation;
-
     /**
-     *
-     * @var \DateTime
      * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $dateaffectation;
-
     /**
-     * @var boolean
      * @ORM\Column(type="boolean" ,nullable=true)
      */
-    private $affectation;
-
+    private $affectation ;
     /**
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $codegauche;
-
+    private $codegauche="";
     /**
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $codedroite;
-
-
+    private $codedroite="";
     /**
-     * @var boolean
      * @ORM\Column(type="boolean" ,nullable=true)
      */
-    private $active;
-
+    private $active ;
     /**
-     * @var integer
      * @ORM\Column(type="integer" ,nullable=true)
      */
-    private $nbrepartenairegauche;
-
+    private $nbrepartenairegauche=0;
     /**
-     *
-     * @var integer
      * @ORM\Column(type="integer" ,nullable=true)
      */
-    private $nbrepartenairedroite;
-
+    private $nbrepartenairedroite ;
+    /**
+     * Mlm constructor.
+     */
+    public function __construct()
+    {
+        $this->datecreation = new \DateTime('now');
+        $this->dateaffectation = new \DateTime('now');
+    }
     /**
      * @return mixed
      */
@@ -109,7 +86,6 @@ class Mlm
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -117,7 +93,6 @@ class Mlm
     {
         $this->id = $id;
     }
-
     /**
      * @return mixed
      */
@@ -125,7 +100,6 @@ class Mlm
     {
         return $this->idpartenaire;
     }
-
     /**
      * @param mixed $idpartenaire
      */
@@ -133,7 +107,6 @@ class Mlm
     {
         $this->idpartenaire = $idpartenaire;
     }
-
     /**
      * @return mixed
      */
@@ -141,7 +114,6 @@ class Mlm
     {
         return $this->codeparent;
     }
-
     /**
      * @param mixed $codeparent
      */
@@ -149,7 +121,6 @@ class Mlm
     {
         $this->codeparent = $codeparent;
     }
-
     /**
      * @return mixed
      */
@@ -157,7 +128,6 @@ class Mlm
     {
         return $this->codedirect;
     }
-
     /**
      * @param mixed $codedirect
      */
@@ -165,7 +135,6 @@ class Mlm
     {
         $this->codedirect = $codedirect;
     }
-
     /**
      * @return mixed
      */
@@ -173,7 +142,6 @@ class Mlm
     {
         return $this->paqueid;
     }
-
     /**
      * @param mixed $paqueid
      */
@@ -181,7 +149,6 @@ class Mlm
     {
         $this->paqueid = $paqueid;
     }
-
     /**
      * @return mixed
      */
@@ -189,15 +156,13 @@ class Mlm
     {
         return $this->datecreation;
     }
-
     /**
      * @param mixed $datecreation
      */
     public function setDatecreation($datecreation)
     {
-        $this->datecreation = $datecreation;
+        $this->datecreation = new DateTime('now');
     }
-
     /**
      * @return mixed
      */
@@ -205,15 +170,13 @@ class Mlm
     {
         return $this->dateaffectation;
     }
-
     /**
      * @param mixed $dateaffectation
      */
     public function setDateaffectation($dateaffectation)
     {
-        $this->dateaffectation = $dateaffectation;
+        $this->dateaffectation = new DateTime('now');
     }
-
     /**
      * @return mixed
      */
@@ -221,7 +184,6 @@ class Mlm
     {
         return $this->affectation;
     }
-
     /**
      * @param mixed $affectation
      */
@@ -229,7 +191,6 @@ class Mlm
     {
         $this->affectation = $affectation;
     }
-
     /**
      * @return mixed
      */
@@ -237,7 +198,6 @@ class Mlm
     {
         return $this->codegauche;
     }
-
     /**
      * @param mixed $codegauche
      */
@@ -245,7 +205,6 @@ class Mlm
     {
         $this->codegauche = $codegauche;
     }
-
     /**
      * @return mixed
      */
@@ -253,7 +212,6 @@ class Mlm
     {
         return $this->codedroite;
     }
-
     /**
      * @param mixed $codedroite
      */
@@ -261,7 +219,6 @@ class Mlm
     {
         $this->codedroite = $codedroite;
     }
-
     /**
      * @return mixed
      */
@@ -269,7 +226,6 @@ class Mlm
     {
         return $this->active;
     }
-
     /**
      * @param mixed $active
      */
@@ -277,7 +233,6 @@ class Mlm
     {
         $this->active = $active;
     }
-
     /**
      * @return mixed
      */
@@ -285,7 +240,6 @@ class Mlm
     {
         return $this->nbrepartenairegauche;
     }
-
     /**
      * @param mixed $nbrepartenairegauche
      */
@@ -293,7 +247,6 @@ class Mlm
     {
         $this->nbrepartenairegauche = $nbrepartenairegauche;
     }
-
     /**
      * @return mixed
      */
@@ -301,7 +254,6 @@ class Mlm
     {
         return $this->nbrepartenairedroite;
     }
-
     /**
      * @param mixed $nbrepartenairedroite
      */
@@ -309,8 +261,15 @@ class Mlm
     {
         $this->nbrepartenairedroite = $nbrepartenairedroite;
     }
-
-
-
-
+    private function getUser()
+    {
+        return $this->getUser();
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setIdPartenaireValue()
+    {
+        $this->idpartenaire = $this->getUser();
+    }
 }

@@ -6,195 +6,143 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
-
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  *
  *
  * User
  * @ORM\Table(name="utilisateur")
  * @ORM\Entity
+ * @UniqueEntity(
+ *     fields={"code","username"}
+ *     )
  */
-class User extends BaseUser implements UserInterface
+class User extends BaseUser
 {
     /**
-     * @var integer
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
     /**
-     *
-     *
-     * @ORM\ManyToOne(targetEntity="DL\BackofficeBundle\Entity\Mlm", cascade={"persist"})
-     * @ORM\JoinColumn(name="mlm_id", referencedColumnName="id")
-     * @Assert\Type(type="DL\UserBundle\Entity\Mlm")
-     * @Assert\Valid()
-     *
-     */
-    private $Mlm ;
-
-
-    /**
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $nom  ;
-
+    private $emailenrolleur ;
     /**
-     * @var string
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string" ,nullable=true)
+     */
+    private $emaildirect ;
+    /**
+     * @ORM\Column(type="string" ,nullable=true)
+     */
+    private $nom ;
+    /**
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $prenom ;
-
     /**
-     *
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
     private $cin ;
-
     /**
-     *
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $rib ;
-
+    private $rib = "";
     /**
-     *
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
     private $adresse ;
-
     /**
-     *
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $ville;
-
+    private $ville = "";
     /**
-     *
-     *
-     * @var string
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $pays;
-
+    private $pays ;
     /**
-     *
-     * @var integer
      * @ORM\Column(type="integer" ,nullable=true)
      */
     private $codepostal ;
-
     /**
-     *
      * @var string
-     * @ORM\Column(type="string" ,nullable=true)
-     */
-    private $code ;
-
-    /**
-     * @var integer
      *
+     * @ORM\Column(type="string" ,nullable=true)
+     *
+     */
+    private $code;
+    /**
      * @ORM\Column(type="string" ,nullable=true)
      */
     private $tel;
-
     /**
-     * @var string
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $ribDocument;
+    /**
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $cinDocument ;
+    /**
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $civilite ;
-
+    private $civilite="";
     /**
      *
      * @var \DateTime
      * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $datedenaissance;
-
     /**
-     * @ORM\Column(type="blob" ,nullable=true)
+     * @ORM\Column(type="string" ,nullable=true)
      */
     private $image ;
-
-    /**
-     * @var blob
-     * @ORM\Column(type="blob" ,nullable=true)
-     */
-    private $ribDocument ;
-
-    /**
-     *
-     *  @var blob
-     * @ORM\Column(type="blob" ,nullable=true)
-     */
-    private $cinDocument ;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="facebook_id", type="string", nullable=true)
-     */
-    protected $facebook_id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="google_id", type="string", nullable=true)
-     */
-    protected $google_id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="twitter_id", type="string", nullable=true)
-     */
-    protected $twitter_id;
-
-
-
     /**
      * User constructor.
-     *
      */
     public function __construct()
     {
         $this->datedenaissance = new \DateTime('now');
+        $this->roles = array('ROLE_NETWORKER');
+        $this->enabled = 1;
+        $this->code = random_int(25,982776);
     }
-
     /**
      * @return mixed
      */
-    public function getMlm()
+    public function getEmailenrolleur()
     {
-        return $this->Mlm;
+        return $this->emailenrolleur;
     }
-
     /**
-     * @param mixed $Mlm
+     * @param mixed $emailenrolleur
      */
-    public function setMlm($Mlm)
+    public function setEmailenrolleur($emailenrolleur)
     {
-        $this->Mlm = $Mlm;
+        $this->emailenrolleur = $emailenrolleur;
     }
-
-
-
+    /**
+     * @return mixed
+     */
+    public function getEmaildirect()
+    {
+        return $this->emaildirect;
+    }
+    /**
+     * @param mixed $emaildirect
+     */
+    public function setEmaildirect($emaildirect)
+    {
+        $this->emaildirect = $emaildirect;
+    }
     public function setEmail($email)
     {
         $email = is_null($email) ? '' : $email;
         parent::setEmail($email);
         $this->setUsername($email);
-
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -202,7 +150,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->civilite;
     }
-
     /**
      * @param mixed $civilite
      */
@@ -210,7 +157,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->civilite = $civilite;
     }
-
     /**
      * @return mixed
      */
@@ -218,7 +164,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->tel;
     }
-
     /**
      * @param mixed $tel
      */
@@ -226,8 +171,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->tel = $tel;
     }
-
-
     /**
      * @return mixed
      */
@@ -235,7 +178,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->nom;
     }
-
     /**
      * @param mixed $nom
      */
@@ -243,7 +185,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->nom = $nom;
     }
-
     /**
      * @return mixed
      */
@@ -251,7 +192,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->cin;
     }
-
     /**
      * @param mixed $cin
      */
@@ -259,7 +199,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->cin = $cin;
     }
-
     /**
      * @return mixed
      */
@@ -267,7 +206,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->adresse;
     }
-
     /**
      * @param mixed $adresse
      */
@@ -275,7 +213,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->adresse = $adresse;
     }
-
     /**
      * @return mixed
      */
@@ -283,7 +220,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->codepostal;
     }
-
     /**
      * @param mixed $codepostal
      */
@@ -291,23 +227,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->codepostal = $codepostal;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCode()
-    {
-        return $this->code;
-    }
-
-    /**
-     * @param mixed $code
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
-    }
-
     /**
      * @return mixed
      */
@@ -315,7 +234,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->datedenaissance;
     }
-
     /**
      * @param mixed $datedenaissance
      */
@@ -323,7 +241,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->datedenaissance = $datedenaissance;
     }
-
     /**
      * @return mixed
      */
@@ -331,7 +248,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -339,7 +255,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->id = $id;
     }
-
     /**
      * @return mixed
      */
@@ -347,7 +262,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->prenom;
     }
-
     /**
      * @param mixed $prenom
      */
@@ -355,7 +269,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->prenom = $prenom;
     }
-
     /**
      * @return mixed
      */
@@ -363,7 +276,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->ville;
     }
-
     /**
      * @param mixed $ville
      */
@@ -371,7 +283,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->ville = $ville;
     }
-
     /**
      * @return mixed
      */
@@ -379,7 +290,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->pays;
     }
-
     /**
      * @param mixed $pays
      */
@@ -387,7 +297,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->pays = $pays;
     }
-
     /**
      * @return mixed
      */
@@ -395,7 +304,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->image;
     }
-
     /**
      * @param mixed $image
      */
@@ -403,41 +311,6 @@ class User extends BaseUser implements UserInterface
     {
         $this->image = $image;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCinDocument()
-    {
-        return $this->cinDocument;
-    }
-
-    /**
-     * @param mixed $cinDocument
-     */
-    public function setCinDocument($cinDocument)
-    {
-        $this->cinDocument = $cinDocument;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRibDocument()
-    {
-        return $this->ribDocument;
-    }
-
-    /**
-     * @param mixed $ribDocument
-     */
-    public function setRibDocument($ribDocument)
-    {
-        $this->ribDocument = $ribDocument;
-    }
-
-
-
     /**
      * @return mixed
      */
@@ -445,7 +318,6 @@ class User extends BaseUser implements UserInterface
     {
         return $this->rib;
     }
-
     /**
      * @param mixed $rib
      */
@@ -453,54 +325,46 @@ class User extends BaseUser implements UserInterface
     {
         $this->rib = $rib;
     }
-
     /**
      * @return string
      */
-    public function getFacebookId()
+    public function getCode()
     {
-        return $this->facebook_id;
+        return $this->code;
     }
-
     /**
-     * @param string $facebook_id
+     * @param string $code
      */
-    public function setFacebookId($facebook_id)
+    public function setCode($code)
     {
-        $this->facebook_id = $facebook_id;
+        $this->code = $code;
     }
-
     /**
-     * @return string
+     * @return mixed
      */
-    public function getGoogleId()
+    public function getCinDocument()
     {
-        return $this->google_id;
+        return $this->cinDocument;
     }
-
     /**
-     * @param string $google_id
+     * @param mixed $cinDocument
      */
-    public function setGoogleId($google_id)
+    public function setCinDocument($cinDocument)
     {
-        $this->google_id = $google_id;
+        $this->cinDocument = $cinDocument;
     }
-
     /**
-     * @return string
+     * @return mixed
      */
-    public function getTwitterId()
+    public function getRibDocument()
     {
-        return $this->twitter_id;
+        return $this->ribDocument;
     }
-
     /**
-     * @param string $twitter_id
+     * @param mixed $ribDocument
      */
-    public function setTwitterId($twitter_id)
+    public function setRibDocument($ribDocument)
     {
-        $this->twitter_id = $twitter_id;
+        $this->ribDocument = $ribDocument;
     }
-
-
 }
