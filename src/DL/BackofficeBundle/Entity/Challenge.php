@@ -31,6 +31,11 @@ class Challenge
     private $datedebut;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $videolink;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $datefin;
@@ -46,9 +51,125 @@ class Challenge
     private $description;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="blob")
      */
     private $logo;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDatedebut()
+    {
+        return $this->datedebut;
+    }
+
+    /**
+     * @param mixed $datedebut
+     */
+    public function setDatedebut($datedebut)
+    {
+        $this->datedebut = $datedebut;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDatefin()
+    {
+        return $this->datefin;
+    }
+
+    /**
+     * @param mixed $datefin
+     */
+    public function setDatefin($datefin)
+    {
+        $this->datefin = $datefin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogo()
+    {
+        return $this->logo;
+    }
+
+    /**
+     * @param mixed $logo
+     */
+    public function setLogo($logo)
+    {
+        $this->logo = $logo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVideolink()
+    {
+        return $this->videolink;
+    }
+
+    /**
+     * @param mixed $videolink
+     */
+    public function setVideolink($videolink)
+    {
+        $this->videolink = $videolink;
+    }
+
+
+
+
 
 
 

@@ -1,0 +1,6 @@
+dl_commission_homepage:
+    path:     /
+    defaults: { _controller: DLCommissionBundle:Default:index }
+dl_commission_calcommission:
+    path:     /commission/{id}/{year}
+    defaults: { _controller: DLCommissionBundle:Commission:getearnbymonth }

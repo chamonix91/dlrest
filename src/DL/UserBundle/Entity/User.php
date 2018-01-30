@@ -1,14 +1,21 @@
 <?php
+
 namespace DL\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  *
  *
  * User
  * @ORM\Table(name="utilisateur")
-  * @ORM\Entity
+ * @ORM\Entity
+ * @UniqueEntity(
+ *     fields={"code","username"}
+ *     )
  */
 class User extends BaseUser
 {
@@ -18,74 +25,152 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
     /**
      * @ORM\Column(type="string" ,nullable=true)
      */
-    private $nom="";
-
+    private $emailenrolleur ;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $prenom="";
-
+    private $emaildirect ;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $cin="";
-
+    private $nom ;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $rib="";
-
+    private $prenom ;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $adresse="";
-
+    private $cin ;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $ville="";
-
+    private $rib = "";
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $pays="";
-
+    private $adresse ;
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $codepostal= 0;
-
+    private $ville = "";
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $code="";
-
+    private $pays ;
+    /**
+     * @ORM\Column(type="integer" ,nullable=true)
+     */
+    private $codepostal ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string" ,nullable=true)
+     *
+     */
+    private $code;
+    /**
+     * @ORM\Column(type="string" ,nullable=true)
+     */
+    private $tel;
+    /**
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $ribDocument;
+    /**
+     * @ORM\Column(type="blob" ,nullable=true)
+     */
+    private $cinDocument ;
+    /**
+     * @ORM\Column(type="string" ,nullable=true)
+     */
+    private $civilite="";
     /**
      *
      * @var \DateTime
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime" ,nullable=true)
      */
     private $datedenaissance;
-
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      */
-    private $image="";
-
+    private $image ;
     /**
      * User constructor.
-     *
      */
     public function __construct()
     {
-        $this->datedenaissance = new \DateTime('now');;
+        $this->datedenaissance = new \DateTime('now');
+        $this->roles = array('ROLE_NETWORKER');
+        $this->enabled = 1;
+        $this->code = random_int(25,982776);
     }
-
-
+    /**
+     * @return mixed
+     */
+    public function getEmailenrolleur()
+    {
+        return $this->emailenrolleur;
+    }
+    /**
+     * @param mixed $emailenrolleur
+     */
+    public function setEmailenrolleur($emailenrolleur)
+    {
+        $this->emailenrolleur = $emailenrolleur;
+    }
+    /**
+     * @return mixed
+     */
+    public function getEmaildirect()
+    {
+        return $this->emaildirect;
+    }
+    /**
+     * @param mixed $emaildirect
+     */
+    public function setEmaildirect($emaildirect)
+    {
+        $this->emaildirect = $emaildirect;
+    }
+    public function setEmail($email)
+    {
+        $email = is_null($email) ? '' : $email;
+        parent::setEmail($email);
+        $this->setUsername($email);
+        return $this;
+    }
+    /**
+     * @return mixed
+     */
+    public function getCivilite()
+    {
+        return $this->civilite;
+    }
+    /**
+     * @param mixed $civilite
+     */
+    public function setCivilite($civilite)
+    {
+        $this->civilite = $civilite;
+    }
+    /**
+     * @return mixed
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+    /**
+     * @param mixed $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
     /**
      * @return mixed
      */
@@ -93,7 +178,6 @@ class User extends BaseUser
     {
         return $this->nom;
     }
-
     /**
      * @param mixed $nom
      */
@@ -101,7 +185,6 @@ class User extends BaseUser
     {
         $this->nom = $nom;
     }
-
     /**
      * @return mixed
      */
@@ -109,7 +192,6 @@ class User extends BaseUser
     {
         return $this->cin;
     }
-
     /**
      * @param mixed $cin
      */
@@ -117,7 +199,6 @@ class User extends BaseUser
     {
         $this->cin = $cin;
     }
-
     /**
      * @return mixed
      */
@@ -125,7 +206,6 @@ class User extends BaseUser
     {
         return $this->adresse;
     }
-
     /**
      * @param mixed $adresse
      */
@@ -133,7 +213,6 @@ class User extends BaseUser
     {
         $this->adresse = $adresse;
     }
-
     /**
      * @return mixed
      */
@@ -141,7 +220,6 @@ class User extends BaseUser
     {
         return $this->codepostal;
     }
-
     /**
      * @param mixed $codepostal
      */
@@ -149,23 +227,6 @@ class User extends BaseUser
     {
         $this->codepostal = $codepostal;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCode()
-    {
-        return $this->code;
-    }
-
-    /**
-     * @param mixed $code
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
-    }
-
     /**
      * @return mixed
      */
@@ -173,7 +234,6 @@ class User extends BaseUser
     {
         return $this->datedenaissance;
     }
-
     /**
      * @param mixed $datedenaissance
      */
@@ -181,7 +241,6 @@ class User extends BaseUser
     {
         $this->datedenaissance = $datedenaissance;
     }
-
     /**
      * @return mixed
      */
@@ -189,7 +248,6 @@ class User extends BaseUser
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -197,7 +255,6 @@ class User extends BaseUser
     {
         $this->id = $id;
     }
-
     /**
      * @return mixed
      */
@@ -205,7 +262,6 @@ class User extends BaseUser
     {
         return $this->prenom;
     }
-
     /**
      * @param mixed $prenom
      */
@@ -213,7 +269,6 @@ class User extends BaseUser
     {
         $this->prenom = $prenom;
     }
-
     /**
      * @return mixed
      */
@@ -221,7 +276,6 @@ class User extends BaseUser
     {
         return $this->ville;
     }
-
     /**
      * @param mixed $ville
      */
@@ -229,7 +283,6 @@ class User extends BaseUser
     {
         $this->ville = $ville;
     }
-
     /**
      * @return mixed
      */
@@ -237,7 +290,6 @@ class User extends BaseUser
     {
         return $this->pays;
     }
-
     /**
      * @param mixed $pays
      */
@@ -245,7 +297,6 @@ class User extends BaseUser
     {
         $this->pays = $pays;
     }
-
     /**
      * @return mixed
      */
@@ -253,7 +304,6 @@ class User extends BaseUser
     {
         return $this->image;
     }
-
     /**
      * @param mixed $image
      */
@@ -261,7 +311,6 @@ class User extends BaseUser
     {
         $this->image = $image;
     }
-
     /**
      * @return mixed
      */
@@ -269,7 +318,6 @@ class User extends BaseUser
     {
         return $this->rib;
     }
-
     /**
      * @param mixed $rib
      */
@@ -277,9 +325,46 @@ class User extends BaseUser
     {
         $this->rib = $rib;
     }
-
-
-
-
-
+    /**
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+    /**
+     * @param string $code
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+    }
+    /**
+     * @return mixed
+     */
+    public function getCinDocument()
+    {
+        return $this->cinDocument;
+    }
+    /**
+     * @param mixed $cinDocument
+     */
+    public function setCinDocument($cinDocument)
+    {
+        $this->cinDocument = $cinDocument;
+    }
+    /**
+     * @return mixed
+     */
+    public function getRibDocument()
+    {
+        return $this->ribDocument;
+    }
+    /**
+     * @param mixed $ribDocument
+     */
+    public function setRibDocument($ribDocument)
+    {
+        $this->ribDocument = $ribDocument;
+    }
 }

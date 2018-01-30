@@ -1,3 +1,8 @@
+dl_commission:
+    resource: "@DLCommissionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
 dl_achat:
     resource: "@DLAchatBundle/Resources/config/routing.yml"
     prefix:   /
@@ -10,10 +15,57 @@ dl_backoffice:
     resource: "@DLBackofficeBundle/Resources/config/routing.yml"
     prefix:   /
 
+#test_rest
 user:
     resource: "@DLUserBundle/Controller/UserController.php"
     prefix:   /
     type:     rest
+
+#achat rest
+achat:
+    resource: "@DLAchatBundle/Controller/AchatController.php"
+    prefix:   /
+    type:     rest
+#produit rest
+produit:
+    resource: "@DLAchatBundle/Controller/ProductController.php"
+    prefix:   /
+    type:     rest
+#blog rest
+blog:
+    resource: "@DLBackofficeBundle/Controller/blogController.php"
+    prefix:   /
+    type:     rest
+#commande rest
+commande:
+    resource: "@DLCommissionBundle/Controller/CommandeController.php"
+    prefix:   /
+    type:     rest
+#achat rest
+vente:
+    resource: "@DLCommissionBundle/Controller/AchatController.php"
+    prefix:   /
+    type:     rest
+#challenge rest
+challenge:
+    resource: "@DLBackofficeBundle/Controller/ChallengeController.php"
+    prefix:   /
+    type:     rest
+#categorie rest
+categorie:
+    resource: "@DLAchatBundle/Controller/CategorieController.php"
+    prefix:   /
+    type:     rest
+#inscription_rest
+inscription:
+    resource: "@DLUserBundle/Controller/InscriptionController.php"
+    prefix:   /
+    type:     rest
+
+#JWT_login
+api_login_check:
+    path: /api/login_check
+
 
 # app/config/routing.yml
 fos_user:
@@ -23,4 +75,16 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
+#Authentification
 
+auth-tokens:
+    resource: "@DLUserBundle/Controller/AuthTokenController.php"
+    type:     rest
+
+
+
+#arbo_rest
+tree:
+    resource: "@DLCommissionBundle/Controller/ArboController.php"
+    prefix:   /
+    type:     rest

@@ -41,14 +41,123 @@ class Achat
     private $dateconfirmation;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="integer")
      */
-    private $montant;
+    private $idproduit;
 
     /**
      * @ORM\Column(type="string")
      */
-    private $type;
+    private $type="";
+
+    /**
+     * Achat constructor.
+     */
+    public function __construct()
+    {
+        $this->datecreation = new \DateTime('now');
+        $this->dateconfirmation = new \DateTime('now');
+
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDatecreation()
+    {
+        return $this->datecreation;
+    }
+
+    /**
+     * @param mixed $datecreation
+     */
+    public function setDatecreation($datecreation)
+    {
+        $this->datecreation = $datecreation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdpartenaire()
+    {
+        return $this->idpartenaire;
+    }
+
+    /**
+     * @param mixed $idpartenaire
+     */
+    public function setIdpartenaire($idpartenaire)
+    {
+        $this->idpartenaire = $idpartenaire;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateconfirmation()
+    {
+        return $this->dateconfirmation;
+    }
+
+    /**
+     * @param mixed $dateconfirmation
+     */
+    public function setDateconfirmation($dateconfirmation)
+    {
+        $this->dateconfirmation = $dateconfirmation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdproduit()
+    {
+        return $this->idproduit;
+    }
+
+    /**
+     * @param mixed $idproduit
+     */
+    public function setIdproduit($idproduit)
+    {
+        $this->idproduit = $idproduit;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 
 
 

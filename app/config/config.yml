@@ -72,7 +72,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: DL\BackofficeBundle\Entity\User
+    user_class: DL\UserBundle\Entity\User
     from_email:
         address: yourmail@yourdomain.com
         sender_name: demo
@@ -99,3 +99,4 @@ fos_rest:
         view_response_listener: 'force'
         formats:
             json: true
+
