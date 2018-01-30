@@ -64,7 +64,10 @@ class Produit
      */
     private $quantite;
 
-
+    /**
+     * @ORM\Column(type="string" ,nullable=true)
+     */
+    private $shortdescription;
 
     /**
      * @var string
@@ -191,6 +194,23 @@ class Produit
     {
         return $this->description;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getShortdescription()
+    {
+        return $this->shortdescription;
+    }
+
+    /**
+     * @param mixed $shortdescription
+     */
+    public function setShortdescription($shortdescription)
+    {
+        $this->shortdescription = $shortdescription;
+    }
+
 
     /**
      * @param string $description

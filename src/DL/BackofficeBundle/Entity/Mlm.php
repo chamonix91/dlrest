@@ -175,7 +175,7 @@ class Mlm
      */
     public function setDateaffectation($dateaffectation)
     {
-        $this->dateaffectation = new DateTime('now');
+        $this->dateaffectation = $dateaffectation;
     }
     /**
      * @return mixed

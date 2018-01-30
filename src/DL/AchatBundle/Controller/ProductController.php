@@ -39,6 +39,7 @@ class ProductController extends FOSRestController
         $data->setImage3($request->get('image3'));
         $data->setQuantite($request->get('quantite'));
         $data->setDescription($request->get('description'));
+        $data->setShortdescription($request->get('shortdescription'));
        /* $data->setCategorie('a');
         $data->setSouscategorie('78');*/
         $em = $this->getDoctrine()->getManager();
@@ -107,7 +108,7 @@ class ProductController extends FOSRestController
      * @param Request $request
      * @Rest\View()
      */
-    public function getbyidAction(Request $request){
+    public function getprodbyidAction(Request $request){
         $em = $this->get('doctrine.orm.entity_manager');
         $user = $em->getRepository('DLAchatBundle:Produit')
             ->find($request->get('id'));

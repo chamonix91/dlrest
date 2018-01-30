@@ -73,7 +73,7 @@ class UserController extends FOSRestController
      * @param Request $request
      * @Rest\View()
      */
-    public function putAction(Request $request){
+    public function putuserAction(Request $request){
         $user = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLUserBundle:User')
             ->find($request->get('id')); // L'identifiant en tant que paramètre n'est plus nécessaire
@@ -118,7 +118,7 @@ class UserController extends FOSRestController
      * @param Request $request
      * @Rest\View()
      */
-    public function getbyidAction(Request $request){
+    public function getuserbyidAction(Request $request){
         $em = $this->get('doctrine.orm.entity_manager');
         $user = $em->getRepository('DLUserBundle:User')
             ->find($request->get('id'));
