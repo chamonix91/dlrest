@@ -33,6 +33,7 @@ class AchatController extends Controller
         $data = new Achat;
 
         $idpartenaire = $request->get('idpartenaire');
+
         $montant = $request->get('montant');
         //$dateconfirmation= $request->get('dateconfirmation');
         //$datecreation= $request->get('datecreation');

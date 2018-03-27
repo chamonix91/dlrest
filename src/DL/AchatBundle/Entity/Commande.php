@@ -15,35 +15,41 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="commande")
  */
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="commande")
+ */
 class Commande
 {
-
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
-     * @var integer
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $idproduit;
-
-    /**
-     * @var integer
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="integer")
      */
     private $idpartenaire;
-
     /**
-     *
-     * @var \DateTime
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="datetime")
      */
     private $date;
-
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $montant;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $etat;
+    /**
+     * Commande constructor.
+     */
+    public function __construct()
+    {
+        $this->date = new \DateTime('now');
+    }
     /**
      * @return mixed
      */
@@ -51,7 +57,6 @@ class Commande
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -63,27 +68,10 @@ class Commande
     /**
      * @return mixed
      */
-    public function getIdproduit()
-    {
-        return $this->idproduit;
-    }
-
-    /**
-     * @param mixed $idproduit
-     */
-    public function setIdproduit($idproduit)
-    {
-        $this->idproduit = $idproduit;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getIdpartenaire()
     {
         return $this->idpartenaire;
     }
-
     /**
      * @param mixed $idpartenaire
      */
@@ -91,7 +79,6 @@ class Commande
     {
         $this->idpartenaire = $idpartenaire;
     }
-
     /**
      * @return mixed
      */
@@ -99,7 +86,6 @@ class Commande
     {
         return $this->date;
     }
-
     /**
      * @param mixed $date
      */
@@ -107,7 +93,32 @@ class Commande
     {
         $this->date = $date;
     }
-
-
-
+    /**
+     * @return mixed
+     */
+    public function getMontant()
+    {
+        return $this->montant;
+    }
+    /**
+     * @param mixed $montant
+     */
+    public function setMontant($montant)
+    {
+        $this->montant = $montant;
+    }
+    /**
+     * @return mixed
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+    /**
+     * @param mixed $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
 }

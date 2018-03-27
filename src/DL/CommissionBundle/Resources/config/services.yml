@@ -2,3 +2,7 @@ services:
 #    dl_commission.example:
 #        class: DL\CommissionBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+# src/OC/PlatformBundle/Resources/config/services.yml
+     dl_commission.test:
+         class: DL\CommissionBundle\Service\TestService
+         arguments: [ "@doctrine.orm.entity_manager" ]

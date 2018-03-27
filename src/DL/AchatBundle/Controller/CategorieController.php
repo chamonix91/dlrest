@@ -21,14 +21,91 @@ class CategorieController extends FOSRestController
      */
     public function getcategorieAction()
     {
-        //
+        /*
         $restresult = $this->getDoctrine()->getRepository('DLAchatBundle:Categorie')->findAll();
         if ($restresult === null) {
             return new View("there are no users exist", Response::HTTP_NOT_FOUND);
         }
+        return $restresult;*/
+        $users = $this->getDoctrine()->getRepository('DLUserBundle:User')->findAll();
+       // var_dump($users[6478]->getEmail());die();
+        $final = array();
+        for($c=0;$c<count($users);$c++){
+        //for($c=6477;$c<count($users);$c++){
+            $partner = $this->getDoctrine()->
+            getRepository('DLAchatBundle:DreamlifePartnerPartner')
+                ->findOneBycode($users[$c]->getCode());
+            if(!empty($partner)&& !empty($this->getmyparentcode($partner->getUserUid()->getUid()-1))){
+               // var_dump($c);
+            if($this->getnature($partner->getUserUid()->getUid()-1)==2){
+                $intro = [
+                    'idpartenaire'=>$users[$c]->getId(),
+                    'codeparent'=>$this->getmyparentcode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'codedirect'=>$this->getmyenrollercode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'codegauche'=>$this->getmychield($partner->getUserUid()->getUid()-1)[0]->getCode(),
+                    'codedroite'=>$this->getmychield($partner->getUserUid()->getUid()-1)[1]->getCode(),
+                    'paque'=>$partner->getPackId()
+                ];
+            }elseif ($this->getnature($partner->getUserUid()->getUid()-1)==1){
+                $intro = [
+                    'idpartenaire'=>$users[$c]->getId(),
+                    'codeparent'=>$this->getmyparentcode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'codedirect'=>$this->getmyenrollercode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'codegauche'=>$this->getmychield($partner->getUserUid()->getUid()-1)[0]->getCode(),
+                    'paque'=>$partner->getPackId()
+                ];
+            }else{
+                $intro = [
+                    'idpartenaire'=>$users[$c]->getId(),
+                    'codeparent'=>$this->getmyparentcode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'codedirect'=>$this->getmyenrollercode($partner->getUserUid()->getUid()-1)->getCode(),
+                    'paque'=>$partner->getPackId()
+                ];
+            }
+                array_push($final,$intro);
+        }
 
-        return $restresult;
+
+        }
+        return $final;
     }
+    public function getmychield($i)
+    {
+
+        $neuds = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLAchatBundle:DreamlifePartnerPartner')
+            ->findBytreeParentId($i);
+        if(!empty($neuds))
+        return $neuds;
+        else
+            return null;
+    }
+    public function getnature($i)
+    {
+
+        $neuds = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLAchatBundle:DreamlifePartnerPartner')
+            ->findBytreeParentId($i);
+        $x=0;
+        foreach ($neuds as $neut) {
+            $x++;
+        }
+        return $x;
+    }
+    public function getmyparentcode($i){
+        $partner = $this->getDoctrine()->
+        getRepository('DLUserBundle:User')
+            ->find($i);
+        return $partner;
+    }
+    public function getmyenrollercode($i){
+        $partner = $this->getDoctrine()->
+        getRepository('DLUserBundle:User')
+            ->find($i);
+        return $partner;
+    }
+
+
     /**
      * @Rest\Post("/addcategorie/", name="_challenge")
      * @param Request $request

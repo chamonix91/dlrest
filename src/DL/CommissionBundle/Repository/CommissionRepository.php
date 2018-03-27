@@ -40,6 +40,7 @@ class CommissionRepository extends EntityRepository
     public function getcommision($i, $j)
     {
 
+
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('Sum(revenu.montant) as commission, revenu as rev');
         $qb->from('DLBackofficeBundle:Revenu','revenu');

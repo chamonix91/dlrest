@@ -3,6 +3,7 @@ dl_commission:
     prefix:   /
 
 
+
 dl_achat:
     resource: "@DLAchatBundle/Resources/config/routing.yml"
     prefix:   /
@@ -20,6 +21,13 @@ user:
     resource: "@DLUserBundle/Controller/UserController.php"
     prefix:   /
     type:     rest
+#revenue_rest
+revenue:
+    resource: "@DLCommissionBundle/Controller/RevenueController.php"
+    prefix:   /
+    type:     rest
+
+
 
 #achat rest
 achat:
@@ -86,5 +94,10 @@ auth-tokens:
 #arbo_rest
 tree:
     resource: "@DLCommissionBundle/Controller/ArboController.php"
+    prefix:   /
+    type:     rest
+#myarbo_rest
+mytree:
+    resource: "@DLCommissionBundle/Controller/TreeController.php"
     prefix:   /
     type:     rest

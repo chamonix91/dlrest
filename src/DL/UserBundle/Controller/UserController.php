@@ -85,14 +85,10 @@ class UserController extends FOSRestController
 
 
         $em = $this->get('doctrine.orm.entity_manager');
-            // l'entité vient de la base, donc le merge n'est pas nécessaire.
-            // il est utilisé juste par soucis de clarté
-            /*$email = $request->get('email');
-            var_dump($request->get('email'));
-            die();*/
-           // $user->setEmail("sami@gmail.com");
             $user->setEmail($request->get('email'));
             $user->setUsername($request->get('username'));
+            $user->setCin($request->get('cin'));
+            $user->setRib($request->get('rib'));
             $em->merge($user);
             $em->flush();
             return $user;

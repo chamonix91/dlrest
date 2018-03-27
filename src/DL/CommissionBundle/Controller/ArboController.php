@@ -14,23 +14,18 @@ class ArboController extends FOSRestController
     {
         return $this->render('', array('name' => $name));
     }
-    /**
-     * @Rest\Get("/tree/{id}")
-     * @param Request $request
-     * @Rest\View()
-     * @return mixed
-     */
-    public function getTreeAction(Request $request){
+
+    public function getArboAction(Request $request)
+    {
         $id = $request->get('id');
-       // var_dump($id);die();
-        $mlms = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('DLBackofficeBundle:Mlm')
-            ->findAll();
+        // var_dump($id);die();
+
         $mlm = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Mlm')
             ->findOneByidpartenaire($id);
-        $x=0;
-        if(!empty($mlm->getcodegauche()) && !empty($mlm->getcodedroite())){
+        if($mlm->getcodegauche()!= 'NULL' && $mlm->getcodedroite()!= 'NULL'
+            && !empty($this->getleftpartner($mlm->getcodegauche())&& !empty($this->getrightpartner($mlm->getCodedroite())))){
+
             $formatted = [
                 'name'=>$mlm->getIdpartenaire(),
                 'title'=>$this->getinfobyid($mlm->getIdpartenaire())->getNom() .' '
@@ -47,9 +42,60 @@ class ArboController extends FOSRestController
                 ],
                 /***/
             ];
-        }elseif (empty($mlm->getcodegauche()) && !empty($mlm->getcodedroite())){
-            //var_dump('heloo');die();
-           // var_dump($this->getinfobyid($this->getrightpartner($mlm->getCodedroite())->getIdpartenaire())->getPrenom());die();
+        }
+
+    }
+
+    /**
+     * @Rest\Get("/tree/{id}")
+     * @param Request $request
+     * @Rest\View()
+     * @return mixed
+     */
+    public function getTreeAction(Request $request){
+        //var_dump('heello');die();
+        $id = $request->get('id');
+       // var_dump($id);die();
+
+        /*$mlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire($id);*/
+        return $this->formneud($id);
+
+
+
+       // for ($c = 0; $c < count($mlms); $c++) {}
+
+    }
+    public function formneud($i){
+        $mlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire($i);
+
+//var_dump(!empty($this->getrightpartner($mlm->getCodedroite())));die();
+        //if(!empty($mlm->getcodegauche()) && !empty($mlm->getcodedroite())
+        if($mlm->getcodegauche()!='NULL' && $mlm->getcodedroite()!='NULL'
+            && !empty($this->getleftpartner($mlm->getcodegauche()))&& !empty($this->getrightpartner($mlm->getCodedroite()))){
+
+            $formatted = [
+                'name'=>$mlm->getIdpartenaire(),
+                'title'=>$this->getinfobyid($mlm->getIdpartenaire())->getNom() .' '
+                    .$this->getinfobyid($mlm->getIdpartenaire())->getPrenom(),
+                'className'=> $this->colorbypack($mlm->getPaqueid()),
+                'children' => [['name' => $this->getleftpartner($mlm->getcodegauche())->getIdpartenaire(),
+                    'title'=>$this->getinfobyid($this->getleftpartner($mlm->getcodegauche())->getIdpartenaire())->getNom() .' '.
+                        $this->getinfobyid($this->getleftpartner($mlm->getcodegauche())->getIdpartenaire())->getPrenom(),
+                    'className' => $this->colorbypack($this->getleftpartner($mlm->getcodegauche())->getPaqueid())],
+                    ['name' => $this->getrightpartner($mlm->getCodedroite())->getIdpartenaire(),
+                        'title'=>$this->getinfobyid($this->getrightpartner($mlm->getCodedroite())->getIdpartenaire())->getNom() .' '.
+                            $this->getinfobyid($this->getrightpartner($mlm->getCodedroite())->getIdpartenaire())->getPrenom(),
+                        'className' => $this->colorbypack($this->getrightpartner($mlm->getCodedroite())->getPaqueid()) ]
+                ],
+                /***/
+            ];
+            //}elseif (empty($mlm->getcodegauche()) && !empty($mlm->getcodedroite())){
+        }elseif(empty($mlm->getcodegauche()) && !empty($mlm->getcodedroite())
+            &&  !empty($this->getrightpartner($mlm->getCodedroite()))){
             $formatted = [
                 'name'=>$mlm->getIdpartenaire(),
                 'title'=>$this->getinfobyid($mlm->getIdpartenaire())->getNom() .' '.$this->getinfobyid($mlm->getIdpartenaire())->getPrenom(),
@@ -60,9 +106,11 @@ class ArboController extends FOSRestController
                     'className' => $this->colorbypack($this->getrightpartner($mlm->getCodedroite())->getPaqueid())]
                 ],
             ];
-            //var_dump($formatted);die();
+
         }
-        elseif ((!empty($mlm->getcodegauche()) && empty($mlm->getcodedroite()))){
+        //elseif ((!empty($mlm->getcodegauche()) && empty($mlm->getcodedroite()))){
+        elseif(!empty($mlm->getcodegauche()) && empty($mlm->getcodedroite())
+            && !empty($this->getleftpartner($mlm->getcodegauche()))){
             $formatted = [
                 'name'=>$mlm->getIdpartenaire(),
                 'title'=>$this->getinfobyid($mlm->getIdpartenaire())->getNom() .' '.$this->getinfobyid($mlm->getIdpartenaire())->getPrenom(),
@@ -74,7 +122,8 @@ class ArboController extends FOSRestController
                 ],
             ];
         }else{
-            $x=1;
+            //var_dump('dea');die();
+
             $formatted = [
                 'name'=>$mlm->getIdpartenaire(),
                 'title'=>$this->getinfobyid($mlm->getIdpartenaire())->getNom() .' '.$this->getinfobyid($mlm->getIdpartenaire())->getPrenom(),
@@ -82,94 +131,9 @@ class ArboController extends FOSRestController
             ];
         }
 
-        if($x==0){
-        for($i=0;$i<count($formatted['children']);$i++){
 
-            if(!empty($this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche()) &&
-                !empty($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())) {
-                //var_dump($this->getmlmbyid($formatted['children'][$i]['name']));die();
-                //var_dump('zouz');die();
-                $intro = [
-                    'name' => $this->getmlmbyid($formatted['children'][$i]['name'])->getIdpartenaire(),
-                    'title'=>$this->getinfobyid($formatted['children'][$i]['name'])->getNom() .' '
-                        .$this->getinfobyid($formatted['children'][$i]['name'])->getPrenom(),
-                    'className' => $this->colorbypack($this->getmlmbyid($formatted['children'][$i]['name'])->getPaqueid()),
-                    'children' => [['name' => $this->getleftpartner($this->getmlmbyid($formatted['children'][$i]['name'])
-                        ->getcodegauche())->getIdpartenaire(),
-                        'title'=>$this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getNom() .' '.
-                            $this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getPrenom(),
-                        'className' => $this->colorbypack($this->getleftpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getPaqueid())],
-                        ['name' => $this->getrightpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire(),
-                            'title'=>$this->getinfobyid($this->getrightpartner(
-                                    $this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire())->getNom() .' '.
-                                $this->getinfobyid($this->getrightpartner(
-                                    $this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire())->getPrenom(),
-                            'className' => $this->colorbypack($this->getrightpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getPaqueid())]
-                    ],
-                    /***/
-                ];
-            }
-                elseif(empty($this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche()) &&
-                    !empty($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())){
-               // var_dump('m e droit');die();
-                    $intro = [
-                        'name'=>$this->getmlmbyid($formatted['children'][$i]['name'])->getIdpartenaire(),
-                        'title'=>$this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getNom() .' '.
-                            $this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getPrenom(),
-                        'className'=> $this->colorbypack($this->getmlmbyid($formatted['children'][$i]['name'])->getPaqueid()),
-                        'children' => [
-                            ['name' => $this->getrightpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire(),
-                                'title'=>$this->getinfobyid($this->getrightpartner(
-                                        $this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire())->getNom() .' '.
-                                    $this->getinfobyid($this->getrightpartner(
-                                        $this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getIdpartenaire())->getPrenom(),
-                                'className' => $this->colorbypack($this->getrightpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())->getPaqueid()) ]
-                        ],
-                        /***/
-                    ];
 
-            }elseif(!empty($this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche()) &&
-                    empty($this->getmlmbyid($formatted['children'][$i]['name'])->getCodedroite())){
-               // var_dump('m e gauch');die();
-                    $intro = [
-                        'name'=>$this->getmlmbyid($formatted['children'][$i]['name'])->getIdpartenaire(),
-                        'title'=>$this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getNom() .' '.
-                            $this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getPrenom(),
-                        'className'=> $this->colorbypack($this->getmlmbyid($formatted['children'][$i]['name'])->getPaqueid()),
-                        'children' => [['name' => $this->getleftpartner($this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire(),
-                            'title'=>$this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getNom() .' '.
-                            $this->getinfobyid($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getIdpartenaire())->getPrenom(),
-                        'className' => $this->colorbypack($this->getleftpartner(
-                                $this->getmlmbyid($formatted['children'][$i]['name'])->getcodegauche())->getPaqueid())],
-
-                        ],
-                        /***/
-                    ];
-
-            }else{
-                $intro = [
-                    'name'=>$this->getmlmbyid($formatted['children'][$i]['name'])->getIdpartenaire(),
-                    'title'=>$this->getinfobyid($formatted['children'][$i]['name'])->getNom() .' '.
-                        $this->getinfobyid($formatted['children'][$i]['name'])->getPrenom(),
-                    'className'=> $this->colorbypack($this->getmlmbyid($formatted['children'][$i]['name'])->getPaqueid()),
-                ];
-            }
-            $formatted['children'][$i]=$intro;
-        }}
-        //var_dump($formatted['children'][0]['children']);die();
         return $formatted;
-
-
-       // for ($c = 0; $c < count($mlms); $c++) {}
-
     }
     function getinfobyid($i){
         $comarray = $this->get('doctrine.orm.entity_manager')
