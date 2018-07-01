@@ -3,15 +3,19 @@
 namespace DL\AchatBundle\Controller;
 
 use DL\AchatBundle \Entity\Achat;
+use DL\AchatBundle \Entity\Produit;
 use FOS\RestBundle\View\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\Controller\FOSRestController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Validator\Constraints\DateTime;
+use DL\AchatBundle\Services\FileUploader;
+use Symfony\Component\HttpFoundation\File\UploadedFile as uf;
+//Symfony\\Component\\HttpFoundation\\File\\UploadedFile
 
 
-class AchatController extends Controller
+class AchatController extends FOSRestController
 {
     public function indexAction($name)
     {
@@ -55,5 +59,30 @@ class AchatController extends Controller
 
         return $view;
     }
+    /**
+     * @Rest\Get("/achat")
+     */
+
+    public function getAchatAction(Request $request)
+    {
+        $em = $this->get('doctrine.orm.entity_manager');
+        $user = $em->getRepository('DLAchatBundle:Achat')
+            ->findAll();
+        foreach ($user as $result) {
+            $partner = $em->getRepository('DLUserBundle:User')
+                ->find($result->getIdpartenaire());
+            $formatted[] = [
+                'datec' => $result->getDatecreation(),
+                'prix' => $result->getMontant(),
+                'cin' => $partner->getCin(),
+                'nom' => $partner->getNom(),
+                'prenom' => $partner->getPrenom(),
+                'code' => $partner->getCode(),
+
+            ];
+        }
+        return $formatted;
+    }
+
 
 }

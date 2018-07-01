@@ -42,6 +42,15 @@ class User extends BaseUser
      */
     private $prenom ;
     /**
+     *
+     * @ORM\ManyToOne(targetEntity="DL\BackofficeBundle\Entity\Pack", cascade={"remove"})
+     * @ORM\JoinColumn(name="idpack", referencedColumnName="id")
+     * @Assert\Type(type="DL\BackofficeBundle\Entity\Pack")
+     * @Assert\Valid()
+     *
+     */
+    private $pack ;
+    /**
      * @ORM\Column(type="string" ,nullable=true)
      */
     private $cin ;
@@ -98,6 +107,13 @@ class User extends BaseUser
      * @ORM\Column(type="string" ,nullable=true)
      */
     private $image ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="integer" ,nullable=true)
+     *
+     */
+    private $active = 0;
     /**
      * User constructor.
      */
@@ -367,4 +383,37 @@ class User extends BaseUser
     {
         $this->ribDocument = $ribDocument;
     }
+    /**
+     * @return string
+     */
+    public function getActive()
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param string $active
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPack()
+    {
+        return $this->pack;
+    }
+
+    /**
+     * @param mixed $pack
+     */
+    public function setPack($pack)
+    {
+        $this->pack = $pack;
+    }
+
+
 }

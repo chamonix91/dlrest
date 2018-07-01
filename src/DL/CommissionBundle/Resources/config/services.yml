@@ -6,3 +6,9 @@ services:
      dl_commission.test:
          class: DL\CommissionBundle\Service\TestService
          arguments: [ "@doctrine.orm.entity_manager" ]
+     dl_commission.law:
+              class: DL\CommissionBundle\Service\ProbcomService
+              arguments: [ "@doctrine.orm.entity_manager" ]
+     dl_commission.partner:
+                   class: DL\CommissionBundle\Service\RLService
+                   arguments: [ "@doctrine.orm.entity_manager" ]

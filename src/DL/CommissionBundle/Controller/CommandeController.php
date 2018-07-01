@@ -2,6 +2,7 @@
 
 namespace DL\CommissionBundle\Controller;
 
+use DL\BackofficeBundle \Entity\Mlm;
 use DL\CommissionBundle\Command\RemunirationCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\View\View;
@@ -30,27 +31,86 @@ class CommandeController extends FOSRestController
             return new View("there are no users exist", Response::HTTP_NOT_FOUND);
         }
         $mlms = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('DLBackofficeBundle:Mlm')
-            ->findBy(array('affectation'=>0));
+            ->getRepository('DLUserBundle:User')
+            ->findBy(array('active'=> 0));
+
         $commandeinfo = array();
-        for($c=0;$c<count($mlms);$c++){
+        for($c=0;$c<count($mlms);$c++) {
             $partner = $this->getDoctrine()->getRepository('DLAchatBundle:Commande')
-                ->findOneByidpartenaire($mlms[$c]->getIdpartenaire());
-           // var_dump($partner);die();
-            if(!empty($partner))
+                ->findOneByidpartenaire($mlms[$c]->getId());
 
-            $user = $this->get('doctrine.orm.entity_manager')
+            // var_dump($partner);die();
+            $verdi = $this->get('doctrine.orm.entity_manager')
                 ->getRepository('DLUserBundle:User')
-                ->find($partner->getIdpartenaire());
+                ->findOneBy(array('email' => $mlms[$c]->getEmaildirect()));
+            $verenro = $this->get('doctrine.orm.entity_manager')
+                ->getRepository('DLUserBundle:User')
+                ->findOneBy(array('email' => $mlms[$c]->getEmailenrolleur()));
 
-            $intro = [
-                'id'=>$mlms[$c]->getIdpartenaire(),
-                'cin'=>$user->getCin(),
-                'email'=>$user->getEmail(),
-                'prix'=>$partner->getMontant(),
-                'datec'=>$partner->getDate()
-            ];
-            array_push($commandeinfo, $intro);
+            if(!empty($verenro)) {
+                $mlmenro = $this->get('doctrine.orm.entity_manager')
+                    ->getRepository('DLBackofficeBundle:Mlm')
+                    ->findOneBy(array('idpartenaire' => $verenro->getId()));
+            }else{
+                $mlmenro=null;
+            }
+
+            if (!empty($partner)) {
+                if($mlmenro !=null) {
+                    if (!empty($mlmenro->getCodegauche()) && !empty($mlmenro->getCodedroite())) {
+                        $intro = [
+                            'id' => $mlms[$c]->getId(),
+                            'cin' => $mlms[$c]->getCin(),
+                            'email' => $mlms[$c]->getEmail(),
+                            'direct' => $mlms[$c]->getEmaildirect(),
+                            'enrolleur' => $mlms[$c]->getEmailenrolleur(),
+                            'prix' => $partner->getMontant(),
+                            'datec' => $partner->getDate(),
+                            'remarque' => 'enrolleur à déja 2 downline'
+                        ];
+
+                        array_push($commandeinfo, $intro);
+                    }
+                }
+            if  (empty($verdi) || empty($verenro)) {
+                $intro = [
+                    'id' => $mlms[$c]->getId(),
+                    'cin' => $mlms[$c]->getCin(),
+                    'email' => $mlms[$c]->getEmail(),
+                    'direct' => $mlms[$c]->getEmaildirect(),
+                    'enrolleur' => $mlms[$c]->getEmailenrolleur(),
+                    'prix' => $partner->getMontant(),
+                    'datec' => $partner->getDate(),
+                    'remarque' => 'enrolleur ou direct non valide'
+                ];
+                array_push($commandeinfo, $intro);
+            }
+            else {
+
+                $intro = [
+                    'id' => $mlms[$c]->getId(),
+                    'cin' => $mlms[$c]->getCin(),
+                    'email' => $mlms[$c]->getEmail(),
+                    'direct' => $mlms[$c]->getEmaildirect(),
+                    'enrolleur' => $mlms[$c]->getEmailenrolleur(),
+                    'prix' => $partner->getMontant(),
+                    'datec' => $partner->getDate(),
+                    'remarque' => 'Inscrit pré à être validé'
+                ];
+                //}
+                array_push($commandeinfo, $intro);
+            }
+
+            }else{
+                $intro = [
+                    'id' => $mlms[$c]->getId(),
+                    'cin' => $mlms[$c]->getCin(),
+                    'email' => $mlms[$c]->getEmail(),
+                    'remarque' => 'pas de commande'
+                ];
+                array_push($commandeinfo, $intro);
+            }
+
 
 
         }
@@ -90,27 +150,58 @@ class CommandeController extends FOSRestController
      */
     public function ativeAction(Request $request){
         //var_dump(new \DateTime('now'));die();
-
         $data = $this->get('doctrine.orm.entity_manager')
             ->getRepository('DLBackofficeBundle:Mlm')
             ->findOneByidpartenaire($request->get('id'));
+        $em = $this->get('doctrine.orm.entity_manager');
+       $user  = $this->get('doctrine.orm.entity_manager')
+           ->getRepository('DLUserBundle:User')
+           ->find($request->get('id'));
+       $user->setActive(1);
 
-
+        $em->merge($user);
+        $em->flush();
+        $verdi = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLUserBundle:User')
+            ->findOneBy(array('email' => $user->getEmaildirect()));
+        $verenro = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLUserBundle:User')
+            ->findOneBy(array('email' => $user->getEmailenrolleur()));
+        $data = new Mlm();
+        $data->setIdpartenaire($user->getId());
+        $data->setCodedirect($verdi->getCode());
+        $data->setCodeparent($verenro->getCode());
+        $data->setCodegauche(null);
+        $data->setCodedroite(null);
+        $data->setPaqueid($user->getPack()->getId());
+        //$data->setPaqueid($user->getPack()->getId());
 
         $data->setAffectation(1);
         $data->setDateaffectation(new \DateTime('now'));
 
 
-        $em = $this->get('doctrine.orm.entity_manager');
+
 
         $em->merge($data);
+
+        $data1 = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire($verenro->getId());
+        //var_dump($data1);die();
+        if(empty($data1->getCodegauche())){
+            $data1->setCodegauche($user->getCode());
+        }
+        else{
+            $data1->setCodedroite($user->getCode());
+        }
+        $em->merge($data1);
         $em->flush();
         $command = new  RemunirationCommand();
         $command->setContainer($this->container);
         $input = new ArrayInput(array('id' => $request->get('id')));
         $output = new NullOutput();
         $resultCode = $command->run($input, $output);
-        return $data;
+        return null;
 
     }
 }

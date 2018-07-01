@@ -68,6 +68,7 @@ class UserController extends FOSRestController
         return $view;
  }
 
+
     /**
      * @Rest\Put("/user/{id}")
      * @param Request $request
@@ -89,9 +90,38 @@ class UserController extends FOSRestController
             $user->setUsername($request->get('username'));
             $user->setCin($request->get('cin'));
             $user->setRib($request->get('rib'));
+            $user->setNom($request->get('nom'));
+            $user->setPrenom($request->get('prenom'));
+            $user->setEmailenrolleur($request->get('emailenrolleur'));
+            $user->setEmaildirect($request->get('emaildirect'));
             $em->merge($user);
             $em->flush();
-            return $user;
+
+       /*migration
+        *  $userenrolleur = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLUserBundle:User')
+            ->findOneBy(array('emailenrolleur' =>$request->get('emailenrolleur')));
+        $userdirect = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLUserBundle:User')
+            ->findOneBy(array('emaildirect' =>$request->get('emaildirect')));
+        $usermlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:MLM')
+            ->findOneBy(array('idpartenaire'=>$request->get('id')));
+        $usermlm->setCodeparent($userenrolleur->getCode());
+        $usermlm->setCodedirect($userdirect->getCode());
+        $usermlmup = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:MLM')
+            ->findOneBy(array('idpartenaire'=>$userenrolleur->getId()));
+        if(!empty($usermlmup->getCodegauche()) && !empty($usermlmup->getCodegauche())){
+            return new View("occupi", Response::HTTP_NOT_FOUND);
+        }else{
+
+        }
+        $em->merge($usermlm);
+        $em->flush();*/
+
+
+        return $user;
 
     }
 
@@ -123,6 +153,29 @@ class UserController extends FOSRestController
     }
 
     /**
+     * @Rest\Get("/usercom/{id}")
+     * @param Request $request
+     * @Rest\View()
+     */
+    public function getcombyidAction(Request $request){
+        $em = $this->get('doctrine.orm.entity_manager');
+        $user = $em->getRepository('DLAchatBundle:Panier')
+            ->findby(array('idpartenaire' => $request->get('id')));
+        $formatted = [];
+        $fin =array();
+        foreach ($user as $result) {
+            $pr = $em->getRepository('DLAchatBundle:Produit')
+                ->find($result->getIdproduit());
+                $formatted[] = [
+                    'libele' => $pr->getLibelle(),
+                    'prix' => $pr->getPrix(),
+                ];
+                array_push($fin,$formatted);
+        }
+        return($formatted);
+    }
+
+    /**
      * @Rest\Get("/user/{mail}/{password}")
      * @param Request $request
      * @Rest\View()
@@ -135,6 +188,7 @@ class UserController extends FOSRestController
         $em = $this->get('doctrine.orm.entity_manager');
         $user = $em->getRepository('DLUserBundle:User')
             ->findOneBy(array('password'=> $pass, 'email' =>$mail));
+
         $loged=true;
         if(empty($user)){
             $loged=false;

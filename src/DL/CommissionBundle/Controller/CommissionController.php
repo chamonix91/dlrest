@@ -102,9 +102,12 @@ class CommissionController extends FOSRestController
         } else {
             $day = 30;
         }
-        $date = new \DateTime($year . '-' . $month . '-' . $day . ' 01:01:59');
+        $date = new \DateTime($year . '-' . $month . '-' . $day . ' 23:23:59');
         //$date = new \DateTime($year . '-' . $month . '-' . $day . '30 23:59:59');
         $dated = new \DateTime($year . '-' . $month . '-' . '01 01:00:00');
+       /* var_dump($date);
+        var_dump($dated);
+        die();*/
         /***prerequit***/
 
 

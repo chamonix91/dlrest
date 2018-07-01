@@ -24,5 +24,36 @@ class MlmRepository extends EntityRepository
         $count = $qb->getQuery()->getResult();
         return $count;
     }
+    public function directbymonth($d1,$d2,$code){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('mlm.idpartenaire');
+        $qb->from('DLBackofficeBundle:Mlm','mlm');
+        // $qb->from('DLGlobalBundle:DreamlifePartnerSale','sale');
+        $qb->where('mlm.codedirect = :name')
+            ->andWhere('mlm.dateaffectation BETWEEN :namei AND :names');
+        $qb->setParameter('name', $code);
+        $qb->setParameter('namei', $d1);
+        $qb->setParameter('names', $d2);
+        $count = $qb->getQuery()->getResult();
+        return $count;
+    }
+    public function info($code){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('user.id');
+        $qb->from('DLUserBundle:User','user');
+        $qb->where('user.code = :name');
+        $qb->setParameter('name', $code);
+        $count = $qb->getQuery()->getSingleScalarResult();
+        return $count;
+    }
+    public function getmlm($id){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('mlm');
+        $qb->from('DLBackofficeBundle:Mlm','mlm');
+        $qb->where('mlm.idpartenaire = :name');
+        $qb->setParameter('name', $id);
+        $count = $qb->getQuery()->getSingleResult();
+        return $count;
+    }
 
 }

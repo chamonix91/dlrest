@@ -2,6 +2,7 @@
 
 namespace DL\AchatBundle\Controller;
 
+use Couchbase\Document;
 use DL\AchatBundle \Entity\Produit;
 use FOS\RestBundle\View\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -9,6 +10,9 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use DL\AchatBundle\Services\FileUploader;
+use Symfony\Component\HttpFoundation\File\UploadedFile as uf;
+//Symfony\\Component\\HttpFoundation\\File\\UploadedFile
 
 class ProductController extends FOSRestController
 {
@@ -57,7 +61,6 @@ class ProductController extends FOSRestController
         $em = $this->get('doctrine.orm.entity_manager');
         $user = $em->getRepository('DLAchatBundle:Produit')
             ->find($request->get('id'));
-
         $em->remove($user);
         $em->flush();
     }
@@ -76,8 +79,10 @@ class ProductController extends FOSRestController
             return new JsonResponse(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
         }
         $prix= $request->get('prix');
+        $remise= $request->get('remise');
         $libelle= $request->get('libelle');
         $data->setPrix($prix);
+        $data->setRemise($remise);
         $data->setLibelle($libelle);
         $data->setQuantite($request->get('quantite'));
         $data->setDescription($request->get('description'));
@@ -114,6 +119,20 @@ class ProductController extends FOSRestController
             ->find($request->get('id'));
 
         return($user);
+    }
+    /**
+     * @Rest\Post("/up")
+     * @param Request $request
+     * @Rest\View()
+     */
+    public function upAction(Request $request){
+        $file = $request->files->get('File');
+        $a = new FileUploader($this->getParameter('brochures_directory'));
+        $fileName = md5(uniqid()).'.'.$file->guessExtension();
+        $file->move($this->getParameter('brochures_directory'), $fileName);
+        return $fileName;
+
+        //$a->upload($file);
     }
     /**
      * @Rest\Get("/pic/{id}")

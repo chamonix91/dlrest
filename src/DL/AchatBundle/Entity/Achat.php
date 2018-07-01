@@ -40,15 +40,22 @@ class Achat
      */
     private $dateconfirmation;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $idproduit;
+
 
     /**
      * @ORM\Column(type="string")
      */
     private $type="";
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $montant;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $etat;
 
     /**
      * Achat constructor.
@@ -125,21 +132,7 @@ class Achat
         $this->dateconfirmation = $dateconfirmation;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdproduit()
-    {
-        return $this->idproduit;
-    }
 
-    /**
-     * @param mixed $idproduit
-     */
-    public function setIdproduit($idproduit)
-    {
-        $this->idproduit = $idproduit;
-    }
 
 
 
@@ -157,6 +150,38 @@ class Achat
     public function setType($type)
     {
         $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMontant()
+    {
+        return $this->montant;
+    }
+
+    /**
+     * @param mixed $montant
+     */
+    public function setMontant($montant)
+    {
+        $this->montant = $montant;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param mixed $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
     }
 
 

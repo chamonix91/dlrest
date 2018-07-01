@@ -7,8 +7,11 @@
  */
 namespace DL\CommissionBundle\Service;
 use DL\BackofficeBundle \Entity\Revenu;
+use DL\CommissionBundle\Command\leftcommandCommand;
+use DL\CommissionBundle\Controller\TreeController;
 use DL\UserBundle\DLUserBundle;
 use Doctrine\ORM\EntityManager;
+use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 class TestService
@@ -70,13 +73,16 @@ class TestService
 
     public function getmycommande($i)
     {
-
+        var_dump($i);
         $neud = $this->em
             ->getRepository('DLAchatBundle:Commande')
             ->findOneByidpartenaire($i);
 
-
-        return $neud->getMontant();
+        if(empty($neud)){
+            return 600;
+        }else {
+            return $neud->getMontant();
+        }
     }
     function getmypack($i){
         $mlm = $this->em
@@ -84,7 +90,13 @@ class TestService
             ->find($i);
         return $mlm;
     }
-    public function testing($io){
+    //public function testing($io){
+    public function testing($dispropcom , $io){
+        var_dump($io);
+
+        $this->em->getConfiguration()->setSQLLogger(null);
+        $mlm=$this->em->getRepository('DLBackofficeBundle:Mlm')->findOneByidpartenaire((int)$io);
+        /*
         $mlms = $this->em
             ->getRepository('DLBackofficeBundle:Mlm')
             ->findAll();
@@ -93,7 +105,7 @@ class TestService
         $revenue = new Revenu();
         $revenue->setIddue(1);
         $revenue->setIdpartenaire($dir->getId());
-        $revenue->setType('indirect');
+        $revenue->setType('jondirect');
         $revenue->setDate(new \DateTime("now"));
         $revenue->setMontant($this->getmycommande($mlm->getIdpartenaire())*0.1);
         $this->em->persist($revenue);
@@ -122,28 +134,41 @@ class TestService
             }
         }
         $dispropcom=array_unique($probcom, SORT_REGULAR);
-        $mydirect = array();
+//houni
+        */
         $lchield = array();
         $rchield = array();
-        for ($c = 0; $c < count($dispropcom); $c++) {
+
+        //for ($c = 16; $c < 17; $c++) {
+       // for ($c = 0; $c < count($dispropcom); $c++) {
             $test = false;
-            if (!empty($this->getleftpartner($dispropcom[$c]->getcodegauche())) &&
-                $this->getrightpartner($dispropcom[$c]->getcodedroite())) {
-                if ($dispropcom[$c]->getcodegauche() != 'NULL' && $dispropcom[$c]->getcodedroite() != 'NULL'
-                    && $this->getleftpartner($dispropcom[$c]->getcodegauche())->getAffectation() == 1 &&
-                    $this->getrightpartner($dispropcom[$c]->getcodedroite())->getaffectation() == 1) {
+            if (!empty($this->getleftpartner($dispropcom->getcodegauche())) &&
+                $this->getrightpartner($dispropcom->getcodedroite())) {
+                /*if ($dispropcom->getcodegauche() != 'NULL' && $dispropcom->getcodedroite() != 'NULL'
+                    && $this->getleftpartner($dispropcom->getcodegauche())->getAffectation() == 1 &&
+                    $this->getrightpartner($dispropcom->getcodedroite())->getaffectation() == 1) {*/
+                if ($dispropcom->getcodegauche() != 'NULL' && $dispropcom->getcodedroite() != 'NULL' &&
+                    $dispropcom->getaffectation() == 1) {
                     $test = true;
-                    array_push($lchield, $this->getleftpartner($dispropcom[$c]->getcodegauche()));
-                    array_push($rchield, $this->getrightpartner($dispropcom[$c]->getcodedroite()));
+                    array_push($lchield, $this->getleftpartner($dispropcom->getcodegauche()));
+                    array_push($rchield, $this->getrightpartner($dispropcom->getcodedroite()));
 
                 }
             }
-
-            /****gauche droite**/
+            //gauche droite
             if ($test) {
+
+
                 for ($i = 0; $i < count($rchield); $i++) {
 
-                    if (!empty($rchield[$i])) {
+                    if($i % 500 == 0 ){
+                         sleep ( 5 );
+                    }
+                    if($rchield[$i]->getId()==$mlm->getId()){
+                        break;
+                    }
+
+                    if (!empty($rchield[$i]) && $rchield[$i]->getIdpartenaire() != $mlm->getIdpartenaire()) {
 
                         //if ($rchield[$i]->getcodegauche() != 'NULL' && !($rchield[$i]->getcodedroite() != 'NULL')) {
                         if ( !empty($rchield[$i]->getcodegauche()) && !empty($rchield[$i]->getcodedroite())) {
@@ -165,9 +190,17 @@ class TestService
                             }
                         }
                     }
-                }//fin boucle rchield*/
+                }//fin boucle rchield
+
+
                 for ($i = 0; $i < count($lchield); $i++) {
-                    if (!empty($lchield[$i])) {
+                    if($i % 500 == 0 ){
+                        sleep ( 5 );
+                    }
+                    if($lchield[$i]->getId()==$mlm->getId()){
+                        break;
+                    }
+                    if (!empty($lchield[$i]) && $lchield[$i]->getIdpartenaire() != $mlm->getIdpartenaire()) {
 
                         if ( !empty($lchield[$i]->getcodegauche()) && !empty($lchield[$i]->getcodedroite())
                         ) {
@@ -188,29 +221,53 @@ class TestService
                         }
                     }
                 }
-            }//fin boucle lchield
-            usort($lchield, array($this, "cmp"));
+
+
+
+
+
+ }//fin boucle lchield
+
+           usort($lchield, array($this, "cmp"));
             usort($rchield, array($this, "cmp"));
-            $t=1;
-            if(!array_search($mlm,$lchield)){
+            $t=0;
+            for($e=0;$e<count($lchield);$e++){
+                if($mlm->getId()==$lchield[$e]->getId()){
+                   $t=1;
+                   break;
+                }
+            }
+            /*if(array_search($mlm,$lchield)!=false){
                 $t=0;
+            }*/
+            $t1=0;
+        for($e=0;$e<count($rchield);$e++){
+            if($mlm->getId()==$rchield[$e]->getId()){
+                $t1=1;
+                break;
             }
-            $t1=1;
-            if(!array_search($mlm,$rchield)){
+        }
+            /*if(array_search($mlm,$rchield)!=false){
                 $t1=0;
-            }
-            if($t==1 && count($lchield)<= count($rchield)){
-                if(array_search($mlm,$lchield)%2==1){
+            }*/
+
+
+
+            if($t==1){
+            if( count($lchield)<= count($rchield)){
+                //if(array_search($mlm,$lchield)%2==1){
+                var_dump('a');
+                if(count($lchield) %2==0){
                     $y=array_search($mlm,$lchield);
                     $x = $this->getmycommande($rchield[$y]->getIdpartenaire()) +
                         $this->getmycommande($rchield[$y-1]->getIdpartenaire())+
                         $this->getmycommande($lchield[$y]->getIdpartenaire()) +
                         $this->getmycommande($lchield[$y-1]->getIdpartenaire());
-                   $x=$x *( $this->getmypack($dispropcom[$c]->getPaqueid())->getCoef()/100);
+                   $x=$x *( $this->getmypack($dispropcom->getPaqueid())->getCoef()/100);
                     $x=$x*0.85;
                     $revenued = new Revenu();
                     $revenued->setIddue(1);
-                    $revenued->setIdpartenaire($dispropcom[$c]->getIdpartenaire());
+                    $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
                     $revenued->setType('indirect');
                     $revenued->setDate(new \DateTime("now"));
                     $revenued->setMontant($x);
@@ -218,18 +275,33 @@ class TestService
                         $this->em->flush();
                 }
             }
-            if($t1==1 && count($rchield)<=count($lchield)){
-                if(array_search($mlm,$rchield)%2==1){
-                    $y=array_search($mlm,$rchield);
-                    $x = $this->getmycommande($rchield[$y]->getIdpartenaire()) +
-                        $this->getmycommande($lchield[$y-1]->getIdpartenaire())+
-                        $this->getmycommande($lchield[$y]->getIdpartenaire()) +
-                        $this->getmycommande($lchield[$y-1]->getIdpartenaire());
+            else{
+
+                $jdod=array();
+                $gdom=array();
+                for($j=0;$j<count($lchield);$j++){
+                    if($lchield[$j]->getDateaffectation()>'2017-12-31 00:00:00'){
+                        array_push($jdod,$lchield[$j]);
+                    }
+                }
+                for($j=0;$j<count($rchield);$j++){
+                    if($rchield[$j]->getDateaffectation()<='2017-12-31 00:00:00'){
+                        array_push($gdom,$rchield[$j]);
+                    }
+                }
+                var_dump(count($gdom));
+                //var_dump(count($jdod));die();
+                if(count($jdod)<=count($gdom) && count($jdod) %2==0 && count($gdom)>0){
+                    $y=array_search($mlm,$jdod);
+                    $x = $this->getmycommande($jdod[$y]->getIdpartenaire()) +
+                        $this->getmycommande($jdod[$y-1]->getIdpartenaire())+
+                        $this->getmycommande($gdom[$y]->getIdpartenaire()) +
+                        $this->getmycommande($gdom[$y-1]->getIdpartenaire());
                     $x=$x*0.85;
-                    $x=$x *( $this->getmypack($dispropcom[$c]->getPaqueid())->getCoef()/100);
+                    $x=$x *( $this->getmypack($dispropcom->getPaqueid())->getCoef()/100);
                     $revenued = new Revenu();
                     $revenued->setIddue(1);
-                    $revenued->setIdpartenaire($dispropcom[$c]->getIdpartenaire());
+                    $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
                     $revenued->setType('indirect');
                     $revenued->setDate(new \DateTime("now"));
                     $revenued->setMontant($x);
@@ -237,18 +309,81 @@ class TestService
                     $this->em->flush();
                 }
             }
+            }
+            else{
+            if( count($rchield)<=count($lchield)){
+                //if(array_search($mlm,$rchield)%2==1){
+               // var_dump('b');
+                if(count($rchield) %2==0){
+                    $y=array_search($mlm,$rchield);
+                    $x = $this->getmycommande($rchield[$y]->getIdpartenaire()) +
+                        $this->getmycommande($lchield[$y-1]->getIdpartenaire())+
+                        $this->getmycommande($lchield[$y]->getIdpartenaire()) +
+                        $this->getmycommande($lchield[$y-1]->getIdpartenaire());
+                    $x=$x*0.85;
+                    $x=$x *( $this->getmypack($dispropcom->getPaqueid())->getCoef()/100);
+                    $revenued = new Revenu();
+                    $revenued->setIddue(1);
+                    $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
+                    $revenued->setType('indirect');
+                    $revenued->setDate(new \DateTime("now"));
+                    $revenued->setMontant($x);
+                    $this->em->persist($revenued);
+                    $this->em->flush();
+                }
+            }
+            else{
+                //var_dump('rrrkkk');die();
+                $jdod=array();
+                $gdom=array();
+                for($j=0;$j<count($rchield);$j++){
+                    if($rchield[$j]->getDateaffectation()>'2017-12-31 00:00:00'){
+                        array_push($jdod,$rchield[$j]);
+                    }
+                }
+                for($j=0;$j<count($lchield);$j++){
+                    if($lchield[$j]->getDateaffectation()<='2017-12-31 00:00:00'){
+                        array_push($gdom,$lchield[$j]);
+                    }
+                }
+                if(count($jdod)<=count($gdom) && count($jdod) %2==0 && count($gdom)>0){
+                    $y=array_search($mlm,$jdod);
+                    $x = $this->getmycommande($jdod[$y]->getIdpartenaire()) +
+                        $this->getmycommande($jdod[$y-1]->getIdpartenaire())+
+                        $this->getmycommande($gdom[$y]->getIdpartenaire()) +
+                        $this->getmycommande($gdom[$y-1]->getIdpartenaire());
+                    $x=$x*0.85;
+                    $x=$x *( $this->getmypack($dispropcom->getPaqueid())->getCoef()/100);
+                    $revenued = new Revenu();
+                    $revenued->setIddue(1);
+                    $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
+                    $revenued->setType('indirect');
+                    $revenued->setDate(new \DateTime("now"));
+                    $revenued->setMontant($x);
+                    $this->em->persist($revenued);
+                    $this->em->flush();
+                }
+            }
+            }
 
+   //}//fin
 
-        }//fin
-        /*$data = new Revenu();
-        $data->setMontant(15);
-        $data->setIdpartenaire($i);
-        $data->setIddue(1);
-        $data->setDate(new \DateTime("now"));
-        $data->setType('direct');
-
-
-        $this->em->persist($data);
-        $this->em->flush();*/
+        $revenued = new Revenu();
+        $revenued->setIddue(count($lchield));
+        $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
+        $revenued->setType('wfééééé');
+        $revenued->setDate(new \DateTime("now"));
+        $revenued->setMontant(count($rchield));
+        $this->em->persist($revenued);
+        $this->em->flush();
+       /* $revenued = new Revenu();
+        $revenued->setIddue(1);
+        $revenued->setIdpartenaire($dispropcom->getIdpartenaire());
+        $revenued->setType('amara');
+        $revenued->setDate(new \DateTime("now"));
+        $revenued->setMontant(1);
+        $this->em->persist($revenued);
+        $this->em->flush();
+*/
     }
 }

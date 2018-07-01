@@ -26,12 +26,27 @@ revenue:
     resource: "@DLCommissionBundle/Controller/RevenueController.php"
     prefix:   /
     type:     rest
+#usermanager_rest
+usermanager:
+    resource: "@DLCommissionBundle/Controller/UserManagerController.php"
+    prefix:   /
+    type:     rest
 
 
 
 #achat rest
 achat:
     resource: "@DLAchatBundle/Controller/AchatController.php"
+    prefix:   /
+    type:     rest
+#dirind
+dirdin:
+    resource: "@DLBackofficeBundle/Controller/DirectIndirectController.php"
+    prefix:   /
+    type:     rest
+#fautrest
+faut:
+    resource: "@DLBackofficeBundle/Controller/FautInscritController.php"
     prefix:   /
     type:     rest
 #produit rest

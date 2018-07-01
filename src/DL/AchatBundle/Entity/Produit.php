@@ -40,20 +40,20 @@ class Produit
     private $libelle;
 
     /**
-     * @var blob
-     * @ORM\Column(type="blob", nullable=true)
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $image1;
 
     /**
-     * @var blob
-     * @ORM\Column(type="blob", nullable=true)
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $image2;
 
     /**
-     * @var blob
-     * @ORM\Column(type="blob", nullable=true)
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
      */
     private $image3;
 
@@ -74,6 +74,10 @@ class Produit
      * @ORM\Column(type="string", nullable=true)
      */
     private $description;
+    /**
+     * @ORM\Column(type="integer" ,nullable=true)
+     */
+    private $remise;
 
     /**
      * @return mixed
@@ -218,6 +222,21 @@ class Produit
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+    /**
+     * @return mixed
+     */
+    public function getRemise()
+    {
+        return $this->remise;
+    }
+
+    /**
+     * @param mixed $remise
+     */
+    public function setRemise($remise)
+    {
+        $this->remise = $remise;
     }
 
 
