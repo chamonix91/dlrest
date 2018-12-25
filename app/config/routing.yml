@@ -64,6 +64,11 @@ commande:
     resource: "@DLCommissionBundle/Controller/CommandeController.php"
     prefix:   /
     type:     rest
+#endwork rest
+challenfire:
+    resource: "@DLCommissionBundle/Controller/ChallengedirController.php"
+    prefix:   /
+    type:     rest
 #achat rest
 vente:
     resource: "@DLCommissionBundle/Controller/AchatController.php"

@@ -120,8 +120,8 @@ class CommissionController extends FOSRestController
         $lcp = array();
         for($f=0;$f<count($comarray);$f++){
             if($comarray[$f]['commission']>0){
-                if($comarray[$f]['commission']<
-                    $this->getmypack($this->getmymlm($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond()){
+                //if($comarray[$f]['commission']<
+                  //  $this->getmypack($this->getmymlm($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond()){
                     $lcp[] = [
                         'nom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getNom(),
                         'mail' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getEmail(),
@@ -130,8 +130,9 @@ class CommissionController extends FOSRestController
                         'rib' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getRib(),
                         'chiffre' => $comarray[$f]['commission'],
                         //'pack' => $this->getmypack($this->getmlmbyid($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond(),
-                    ];}
-                else{
+                    ];
+                //}
+                /*else{
                     $lcp[] = [
                         'nom' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getNom(),
                         'mail' => $this->getmyinfo($comarray[$f]['rev']->getIdpartenaire())->getEmail(),
@@ -141,7 +142,7 @@ class CommissionController extends FOSRestController
                         //'chiffre' => $comarray[$f]['commission'],
                         'chiffre' => $this->getmypack($this->getmymlm($comarray[$f]['rev']->getIdpartenaire())->getPaqueid())->getPlafond(),
                     ];
-                }
+                }*/
             }
         }
 

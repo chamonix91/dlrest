@@ -43,7 +43,7 @@ class MlmRepository extends EntityRepository
         $qb->from('DLUserBundle:User','user');
         $qb->where('user.code = :name');
         $qb->setParameter('name', $code);
-        $count = $qb->getQuery()->getSingleScalarResult();
+        $count = $qb->getQuery()->getSingleResult();
         return $count;
     }
     public function getmlm($id){
@@ -53,6 +53,16 @@ class MlmRepository extends EntityRepository
         $qb->where('mlm.idpartenaire = :name');
         $qb->setParameter('name', $id);
         $count = $qb->getQuery()->getSingleResult();
+        return $count;
+    }
+    public function cori(){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('mlm.idpartenaire');
+        $qb->from('DLBackofficeBundle:Mlm','mlm');
+        // $qb->from('DLGlobalBundle:DreamlifePartnerSale','sale');
+        $qb->where('mlm.datecreation > :name');
+        $qb->setParameter('name', "2018-06-15 00:00:01");
+        $count = $qb->getQuery()->getResult();
         return $count;
     }
 

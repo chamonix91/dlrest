@@ -2,36 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="983fe2c7-9efc-4486-b271-66d08c067913" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Command/TransfertCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/CorrectionController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/DreamlifePartnerSale.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Panier.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Services/FileUploader.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/FautInscritController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Command/leftcommandCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/UserManagerController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/RLService.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ChallengedirController.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/AchatController.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/AchatController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Achat.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/AchatBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/DL/AchatBundle/Resources/config/services.yml" />
-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php" />
+      <change beforePath="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php" afterPath="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php" />
       <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php" />
       <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
       <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php" />
       <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Resources/config/services.yml" />
+      <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php" />
       <change beforePath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php" afterPath="$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,71 +22,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommandeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php">
+      <file leaf-file-name="TreeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="202" column="53" lean-forward="false" selection-start-line="202" selection-start-column="53" selection-end-line="202" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="2873">
+              <caret line="209" column="35" lean-forward="false" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
+              <folding>
+                <element signature="e#1716#2263#0#PHP" expanded="false" />
+                <element signature="e#2268#2687#0#PHP" expanded="false" />
+                <element signature="e#7027#12583#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mlm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2771">
-              <caret line="168" column="38" lean-forward="false" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemunirationCommand.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="34">
+              <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProbcomService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="334" column="17" lean-forward="false" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="17" />
-              <folding>
-                <element signature="e#2612#4353#0#PHP" expanded="false" />
-                <element signature="e#4547#5410#0#PHP" expanded="false" />
-                <element signature="e#5482#7541#0#PHP" expanded="false" />
-                <element signature="e#7580#9321#0#PHP" expanded="false" />
-                <element signature="e#10065#12844#0#PHP" expanded="false" />
-                <element signature="e#11205#12844#0#PHP" expanded="false" />
-                <element signature="e#12889#15617#0#PHP" expanded="false" />
-                <element signature="e#14023#15617#0#PHP" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,36 +50,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>idpar</find>
-      <find>pack</find>
-      <find>int</find>
-      <find>$dateaffectation</find>
-      <find>cmp</find>
-      <find>getI</find>
-      <find>2018-06</find>
-      <find>title</find>
-      <find>getleftpartner</find>
-      <find>put</find>
-      <find>getPack</find>
-      <find>pac</find>
-      <find>getcodeg</find>
-      <find>getcoded</find>
-      <find>p</find>
-      <find>nb</find>
-      <find>per</find>
       <find>pe</find>
       <find>serv</find>
       <find>dire</find>
       <find>hell</find>
       <find>direc</find>
       <find>repo</find>
-      <find>codedi</find>
       <find>coded</find>
       <find>date</find>
       <find>indirectej</find>
       <find>rrr</find>
-      <find>walidd</find>
       <find>walid</find>
+      <find>walidd</find>
+      <find>var_</find>
+      <find>directbymonth</find>
+      <find>direct</find>
+      <find>$dispropcom</find>
+      <find>9143</find>
+      <find>DLUserBundle:User</find>
+      <find>mlm</find>
+      <find>code</find>
+      <find>codedi</find>
+      <find>array</find>
+      <find>fin</find>
+      <find>find</find>
+      <find>getmy</find>
+      <find>lef</find>
+      <find>commi</find>
+      <find>/right</find>
+      <find>$dateaffectation</find>
+      <find>NonUniqueResultException</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -193,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Blog.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/blogController.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Pack.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommandeRepository.php" />
@@ -202,7 +136,6 @@
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Commande.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Revenu.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Controller/FixigController.php" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/CoreUserUser.php" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/DreamlifePartnerPartner.php" />
@@ -219,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/RService.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Command/leftcommandCommand.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/RLService.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/UserManagerController.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Resources/config/services.yml" />
@@ -233,17 +165,20 @@
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/DL/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php" />
         <option value="$PROJECT_DIR$/src/DL/UserBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/FautInscritController.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php" />
+        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php" />
-        <option value="$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php" />
-        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php" />
+        <option value="$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ChallengedirController.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
       </list>
     </option>
   </component>
@@ -298,7 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -306,11 +240,6 @@
             <path>
               <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
               <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
@@ -329,6 +258,14 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CommissionBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dlrest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CommissionBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dlrest" type="b2602c69:ProjectViewProjectNode" />
@@ -342,11 +279,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="last_opened_file_path" value="E:/angular/ng2-admin" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
@@ -529,7 +467,30 @@
       <workItem from="1530138712654" duration="1749000" />
       <workItem from="1530307804647" duration="13811000" />
       <workItem from="1530459814348" duration="820000" />
-      <workItem from="1530482314135" duration="1518000" />
+      <workItem from="1530482314135" duration="3933000" />
+      <workItem from="1530519324170" duration="370000" />
+      <workItem from="1530539587495" duration="908000" />
+      <workItem from="1530660592959" duration="6877000" />
+      <workItem from="1530741098150" duration="3698000" />
+      <workItem from="1530837053353" duration="663000" />
+      <workItem from="1530871989663" duration="6456000" />
+      <workItem from="1530917289404" duration="3868000" />
+      <workItem from="1530953274769" duration="4074000" />
+      <workItem from="1530995913730" duration="1213000" />
+      <workItem from="1531000849798" duration="700000" />
+      <workItem from="1531060978121" duration="8650000" />
+      <workItem from="1531128377627" duration="1991000" />
+      <workItem from="1531141154411" duration="27000" />
+      <workItem from="1531229588477" duration="5787000" />
+      <workItem from="1531305391124" duration="1253000" />
+      <workItem from="1531392585853" duration="1127000" />
+      <workItem from="1532178711532" duration="480000" />
+      <workItem from="1532622549427" duration="853000" />
+      <workItem from="1532639562770" duration="11000" />
+      <workItem from="1532722727518" duration="11527000" />
+      <workItem from="1533050195966" duration="1852000" />
+      <workItem from="1542793044490" duration="697000" />
+      <workItem from="1545733616750" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'Developer' of https://github.com/chamonix91/dlrest into Developer&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/AppKernel.php">
       <created>1514888588835</created>
@@ -692,11 +653,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522165321584</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="lotof">
+      <created>1530483968068</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1530483968068</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="901904000" />
+    <option name="totallyTimeSpent" value="967484000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,19 +677,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3804841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48789713" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34313726" sideWeight="0.5408472" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30718955" sideWeight="0.48108926" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30718955" sideWeight="0.48108926" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -729,6 +695,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34313726" sideWeight="0.4591528" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -771,36 +738,16 @@
     <MESSAGE value="change pay plan" />
     <MESSAGE value="change pay plan2" />
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="lotof" />
+    <option name="LAST_COMMIT_MESSAGE" value="lotof" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -864,24 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ArboController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/UserManagerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="180" column="8" lean-forward="false" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -954,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="84" column="34" lean-forward="false" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Entity/Produit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -989,13 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="273" column="77" lean-forward="false" selection-start-line="273" selection-start-column="77" selection-end-line="273" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Commande.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1014,14 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="45" column="66" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/RevenueController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1039,108 +950,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/FautInscritController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1287">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="191" column="40" lean-forward="false" selection-start-line="191" selection-start-column="40" selection-end-line="191" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/UserManagerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="168" column="38" lean-forward="false" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="202" column="53" lean-forward="false" selection-start-line="202" selection-start-column="53" selection-end-line="202" selection-end-column="53" />
-          <folding />
+          <caret line="180" column="8" lean-forward="false" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Service/ProbcomService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="334" column="17" lean-forward="false" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="17" />
-          <folding>
-            <element signature="e#2612#4353#0#PHP" expanded="false" />
-            <element signature="e#4547#5410#0#PHP" expanded="false" />
-            <element signature="e#5482#7541#0#PHP" expanded="false" />
-            <element signature="e#7580#9321#0#PHP" expanded="false" />
-            <element signature="e#10065#12844#0#PHP" expanded="false" />
-            <element signature="e#11205#12844#0#PHP" expanded="false" />
-            <element signature="e#12889#15617#0#PHP" expanded="false" />
-            <element signature="e#14023#15617#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Command/RemunirationCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state relative-caret-position="85">
+          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/AchatBundle/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="84" column="34" lean-forward="false" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/CommissionRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/AchatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="67" column="11" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ArboController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/FautInscritController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommandeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Repository/MlmRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="51" column="47" lean-forward="false" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/RevenueController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/ChallengedirController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Service/TestService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="142" column="45" lean-forward="false" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Entity/Mlm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="168" column="38" lean-forward="false" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/BackofficeBundle/Controller/DirectIndirectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="159" column="11" lean-forward="false" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/CommissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="164" column="4" lean-forward="false" selection-start-line="164" selection-start-column="4" selection-end-line="169" selection-end-column="5" />
+          <folding>
+            <element signature="e#714#1260#0#PHP" expanded="false" />
+            <element signature="e#1266#1813#0#PHP" expanded="false" />
+            <element signature="e#2136#2373#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DL/CommissionBundle/Controller/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2873">
+          <caret line="209" column="35" lean-forward="false" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
+          <folding>
+            <element signature="e#1716#2263#0#PHP" expanded="false" />
+            <element signature="e#2268#2687#0#PHP" expanded="false" />
+            <element signature="e#7027#12583#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>

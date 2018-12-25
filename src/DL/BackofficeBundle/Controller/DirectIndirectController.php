@@ -2,6 +2,7 @@
 
 namespace DL\BackofficeBundle\Controller;
 
+use DL\CommissionBundle\Controller\TreeController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use DL\BackofficeBundle \Entity\Mlm as Mlm;
 use Doctrine\ORM\EntityRepository;
@@ -190,5 +191,30 @@ class DirectIndirectController extends FOSRestController
 
         }
         var_dump(count($fchield));die();
+    }
+    /**
+     * @Rest\Get("/ptt",name="cor")
+     * @param Request $request
+     * @Rest\View()
+     */
+    public function corbymonthAction(Request $request)
+    {
+
+        $mlms = $this->getDoctrine()->getRepository('DLBackofficeBundle:Mlm')
+            ->cori();
+
+        return $mlms;
+    }
+    /**
+     * @Rest\Get("/touta/{id}",name="cori")
+     * @param Request $request
+     * @Rest\View()
+     */
+    public function corbyAction(Request $request)
+    {
+        $id = $request->get('id');
+         $t = new TreeController();
+
+        return $t->getArbooAction($id);
     }
 }

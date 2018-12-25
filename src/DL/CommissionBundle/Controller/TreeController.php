@@ -321,4 +321,121 @@ class TreeController extends FOSRestController
 
 
     }
+    /**
+     * @Rest\Get("/walidos/{id}")
+     * @param Request $request
+     * @Rest\View()
+     * @return mixed
+     */
+    public function getArbooAction($id)
+    {
+
+
+        $time_start = microtime(true);
+
+        //$id = $request->get('id');
+         //var_dump((int)$id);die();
+
+        $mlm = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findOneByidpartenaire(5300);
+        //var_dump($mlm);die();
+        $chield =array();
+        $mlms = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('DLBackofficeBundle:Mlm')
+            ->findAll();
+
+
+        $formatted=$this->formneud($mlm);
+
+        array_push($chield,$formatted);
+        $base="['children'][0]";
+        $base1="['children'][1]";
+        $a=count($chield);
+        for($c=0;$c<$a;$c++){
+            if(!empty($chield[$c]['children'])) {
+                if (count($chield[$c]['children']) == 2) {
+
+                    $mlm = $this->get('doctrine.orm.entity_manager')
+                        ->getRepository('DLBackofficeBundle:Mlm')
+                        //->findOneByidpartenaire($chield[$c]['children'][0]['name']);
+                        ->findOneBy(array('idpartenaire' => $chield[$c]['children'][0]['name']));
+
+
+                    $formatted = $this->formneud($mlm);
+                    array_push($chield, $formatted);
+                    $mlm = $this->get('doctrine.orm.entity_manager')
+                        ->getRepository('DLBackofficeBundle:Mlm')
+                        //->findOneByidpartenaire($chield[$c]['children'][1]['name']);
+                        ->findOneBy(array('idpartenaire' => $chield[$c]['children'][1]['name']));
+
+                    $formatted = $this->formneud($mlm);
+                    array_push($chield, $formatted);
+                    $a = $a + 2;
+                } elseif (count($chield[$c]['children']) == 1) {
+                    $mlm = $this->get('doctrine.orm.entity_manager')
+                        ->getRepository('DLBackofficeBundle:Mlm')
+                        //->findOneByidpartenaire($chield[$c]['children'][0]['name']);
+                        ->findOneBy(array('idpartenaire' => $chield[$c]['children'][0]['name']));
+
+                    $formatted = $this->formneud($mlm);
+                    array_push($chield, $formatted);
+                    $a++;
+                }
+            }
+            /*if($c == 500){
+                break;
+            }*/
+
+        }
+
+        /****/
+        $fchield=array();
+        foreach ($chield as $p){
+            if(!empty($p['children'])){
+                array_push($fchield,$p);
+            }
+
+        }
+        /*$fchield[0]['children'][0]=array_merge($fchield[0]['children'][0],$fchield[1]);
+        return $fchield[0];*/
+        //return array_merge($fchield[0]['children'][0],$fchield[1]);
+        // var_dump($fchield);die();
+        $k=count($fchield)-1;
+
+        for($i=0,$count=count($fchield)-1;$i<$count;$i++){
+            for($c=0,$count1=count($fchield);$c<$count1;$c++){
+                if(count($fchield[$c]['children'])==2){
+                    if($fchield[$k]['name']==$fchield[$c]['children'][0]['name']){
+                        //array_merge($fchield[$c]['children'][0],$fchield[$k]);
+                        $fchield[$c]['children'][0]= array_merge($fchield[$k],$fchield[$c]['children'][0]);
+                        break;
+                    }
+                    elseif($fchield[$k]['name']==$fchield[$c]['children'][1]['name']){
+                        //array_merge($fchield[$c]['children'][1],$fchield[$k]);
+                        $fchield[$c]['children'][1]=array_merge($fchield[$k],$fchield[$c]['children'][1]);
+                        break;
+                    }
+                }else{
+                    if($fchield[$k]['name']==$fchield[$c]['children'][0]['name']){
+                        //array_merge($fchield[$c]['children'][0],$fchield[$k]);
+                        $fchield[$c]['children'][0]= array_merge($fchield[$k],$fchield[$c]['children'][0]);
+                        break;
+                    }
+                }
+            }
+            $k--;
+        }
+        $time_end = microtime(true);
+        $time = $time_end - $time_start;
+        if($k==-1){
+            return $formatted;
+        }
+        //var_dump('hy');die();
+        // return (count($fchield));
+        return ($fchield[0]);
+        //return $formatted;
+
+
+    }
 }

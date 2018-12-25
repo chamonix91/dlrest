@@ -73,7 +73,7 @@ class TestService
 
     public function getmycommande($i)
     {
-        var_dump($i);
+       // var_dump($i);
         $neud = $this->em
             ->getRepository('DLAchatBundle:Commande')
             ->findOneByidpartenaire($i);
@@ -92,7 +92,7 @@ class TestService
     }
     //public function testing($io){
     public function testing($dispropcom , $io){
-        var_dump($io);
+       // var_dump($io);
 
         $this->em->getConfiguration()->setSQLLogger(null);
         $mlm=$this->em->getRepository('DLBackofficeBundle:Mlm')->findOneByidpartenaire((int)$io);
@@ -256,7 +256,7 @@ class TestService
             if($t==1){
             if( count($lchield)<= count($rchield)){
                 //if(array_search($mlm,$lchield)%2==1){
-                var_dump('a');
+                //var_dump('a');
                 if(count($lchield) %2==0){
                     $y=array_search($mlm,$lchield);
                     $x = $this->getmycommande($rchield[$y]->getIdpartenaire()) +
@@ -289,7 +289,7 @@ class TestService
                         array_push($gdom,$rchield[$j]);
                     }
                 }
-                var_dump(count($gdom));
+               // var_dump(count($gdom));
                 //var_dump(count($jdod));die();
                 if(count($jdod)<=count($gdom) && count($jdod) %2==0 && count($gdom)>0){
                     $y=array_search($mlm,$jdod);
@@ -374,8 +374,8 @@ class TestService
         $revenued->setType('wfééééé');
         $revenued->setDate(new \DateTime("now"));
         $revenued->setMontant(count($rchield));
-        $this->em->persist($revenued);
-        $this->em->flush();
+        /*$this->em->persist($revenued);
+        $this->em->flush();*/
        /* $revenued = new Revenu();
         $revenued->setIddue(1);
         $revenued->setIdpartenaire($dispropcom->getIdpartenaire());

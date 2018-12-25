@@ -27,13 +27,16 @@ class ProbcomService
             ->getRepository('DLAchatBundle:Commande')
             ->findOneByidpartenaire($i);
 
-
-        return $neud->getMontant();
+        if(empty($neud)){
+            return 200;
+        }else{
+        return $neud->getMontant();}
     }
     public function getlawezem($ids){
         $mlms = $this->em
             ->getRepository('DLBackofficeBundle:Mlm')
             ->findAll();
+        //var_dump($ids);
         $mlm=$this->em->getRepository('DLBackofficeBundle:Mlm')->findOneByidpartenaire((int)$ids);
         $dir=$this->em->getRepository('DLUserBundle:User')->findOneBycode($mlm->getCodedirect());
         $revenue = new Revenu();
@@ -49,7 +52,15 @@ class ProbcomService
         array_push($uplines,$mlm);
         $x=count($uplines);
         for($c=0;$c<$x;$c++){
+            //var_dump($uplines[$c]->getIdpartenaire());
             $user=$this->em->getRepository('DLUserBundle:User')->find($uplines[$c]->getIdpartenaire());
+            if($user->getId()==706 ||$user->getId()== 1511 || $user->getId()== 9242
+            || $user->getId()== 2056 || $user->getId()== 1330 || $user->getId()== 1095
+                || $user->getId()== 9050|| $user->getId()== 145|| $user->getId()== 2306
+                || $user->getId()== 2259
+                || $user->getId()== 496 ){
+                break;
+            }
             //$mlm=$this->em->getRepository('DLBackofficeBundle:Mlm')->findOneByidpartenaire($io);
             for($j=0;$j<count($mlms);$j++){
 
